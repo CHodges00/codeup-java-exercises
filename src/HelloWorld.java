@@ -58,20 +58,20 @@ public class HelloWorld {
         x = 3;
         int y;
         y = 4;
-        y = y*=x;
+        y*=x;
         System.out.println(y);
         System.out.println("---------------------------------");
 
 
         x = 10;
         y = 2;
-        x = x/=y;
+        x/=y;
         System.out.println(x);
         System.out.println("---------------------------------");
 
         x = 10;
         y = 2;
-        y = y-=x;
+        y-=x;
         System.out.println(y);
         System.out.println("---------------------------------");
 
@@ -94,6 +94,7 @@ public class HelloWorld {
         System.out.println("Enter something: ");
         String userInput = scanner.nextLine();
         System.out.println("You entered: " + userInput);
+        System.out.println("---------------------------------");
 
     }
 
