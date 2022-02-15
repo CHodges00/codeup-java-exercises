@@ -4,19 +4,21 @@ public class HelloWorld {
         System.out.println("Hello, World!");
         System.out.print("Hello, ");
         System.out.println("World!");
-        System.out.print('H');
-        System.out.print('e');
-        System.out.print('l');
-        System.out.print('l');
-        System.out.print('o');
-        System.out.print(',');
-        System.out.print(' ');
-        System.out.print('W');
-        System.out.print('o');
-        System.out.print('r');
-        System.out.print('l');
-        System.out.print('d');
-        System.out.println('!');
+        {
+            System.out.print('H');
+            System.out.print('e');
+            System.out.print('l');
+            System.out.print('l');
+            System.out.print('o');
+            System.out.print(',');
+            System.out.print(' ');
+            System.out.print('W');
+            System.out.print('o');
+            System.out.print('r');
+            System.out.print('l');
+            System.out.print('d');
+            System.out.println('!');
+        }
         System.out.println("---------------------------------");
 
         int myFavoriteNumber = 25;
