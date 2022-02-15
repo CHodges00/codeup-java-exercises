@@ -1,3 +1,4 @@
+import java.util.Scanner;
 public class HelloWorld {
 
     public static void main(String[] args) {
@@ -84,6 +85,15 @@ public class HelloWorld {
         System.out.println(numbers++);
         System.out.println("---------------------------------");
 
+
+        System.out.println(Integer.MAX_VALUE);
+        System.out.println("---------------------------------");
+
+
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter something: ");
+        String userInput = scanner.nextLine();
+        System.out.println("You entered: " + userInput);
 
     }
 
