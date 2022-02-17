@@ -78,10 +78,37 @@ public class ControlFlowExercises {
 //        TABLE OF POWERS
 
 
+//        Scanner table = new Scanner(System.in);
+//        System.out.println("Enter number, preferably under 10: ");
+//        int entered = table.nextInt();
+//        System.out.println("number\t|\tsquared\t|\tcubed");
+//        System.out.println("------\t|\t------\t|\t------");
+//        for (int i = 1; i <= entered; i++){
+//            int squared = i * i;
+//            int cubed = i * i * i;
+//            System.out.printf("%s\t\t|\t%s\t\t|\t%s%n", i, squared, cubed);
+//        }
 
 
-
-
+//Scanner grades = new Scanner(System.in);
+//System.out.println("Enter your grade:  1-100 ");
+//int grade = grades.nextInt();
+//
+//if (grade > 0 && grade <60){
+//    System.out.println("You made an F....Do Better");
+//} else if (grade > 59 && grade < 67){
+//    System.out.println("You made a D...Meh");
+//} else if (grade > 66 && grade < 80){
+//    System.out.println("You made a C....Slipping By");
+//} else if (grade > 79 && grade < 88){
+//    System.out.println("You made a B....Good Job");
+//} else if (grade > 87 && grade < 100){
+//    System.out.println("You made an A.....AWESOME !");
+//} else if (grade == 100){
+//    System.out.println("PERFECT SCORE !!! 🤘");
+//} else {
+//    System.out.println("Try Again");
+//}
 
 
 
