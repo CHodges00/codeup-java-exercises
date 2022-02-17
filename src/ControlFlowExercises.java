@@ -9,10 +9,32 @@ public class ControlFlowExercises {
 
 
         //            DO WHILE LOOP
-        int i = 0;
-        do {
-            System.out.printf("%s%n", i);
+//        int i = 0;
+//        do {
+//            System.out.printf("%s%n", i);
+//            i = i + 2;
+//        }while (i <= 100);
 
-        }while ();
+//        int i = 100;
+//        do {
+//            System.out.printf("%s%n", i);
+//            i = i - 5;
+//        } while (i >= -10);
+
+//        int i = 2;
+//        long i_lng = i;
+//        do {
+//            System.out.printf("%s%n", i_lng);
+//            i_lng = i_lng * i_lng;
+//        }while (i_lng < 1000000);
+
+//        REFACTOR TO FOR LOOP
+
+
+
+
+
+
+
     }
 }
