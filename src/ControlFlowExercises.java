@@ -62,7 +62,7 @@ public class ControlFlowExercises {
 //
 //
 //        for(int i = 1; i <= 100; i++) {
-//            if (i % 3 == 0 && i % 5 == 0) {
+//            if (i % 3 == 0 & i % 5 == 0) {
 //            System.out.println("FIZZBUZZ");
 //            } else if (i % 5 == 0){
 //            System.out.println("BUZZ");
@@ -90,26 +90,30 @@ public class ControlFlowExercises {
 //        }
 
 
-//Scanner grades = new Scanner(System.in);
-//System.out.println("Enter your grade:  1-100 ");
-//int grade = grades.nextInt();
-//
-//if (grade > 0 && grade <60){
-//    System.out.println("You made an F....Do Better");
-//} else if (grade > 59 && grade < 67){
-//    System.out.println("You made a D...Meh");
-//} else if (grade > 66 && grade < 80){
-//    System.out.println("You made a C....Slipping By");
-//} else if (grade > 79 && grade < 88){
-//    System.out.println("You made a B....Good Job");
-//} else if (grade > 87 && grade < 100){
-//    System.out.println("You made an A.....AWESOME !");
-//} else if (grade == 100){
-//    System.out.println("PERFECT SCORE !!! 🤘");
-//} else {
-//    System.out.println("Try Again");
-//}
+Scanner grades = new Scanner(System.in);
+String cont = "";
 
+do {System.out.println("Enter your grade:  1-100 ");
+    int grade = grades.nextInt();
+
+    if (grade > 0 && grade < 60) {
+        System.out.println("You made an F....Do Better");
+    } else if (grade > 59 && grade < 67) {
+        System.out.println("You made a D...Meh");
+    } else if (grade > 66 && grade < 80) {
+        System.out.println("You made a C....Slipping By");
+    } else if (grade > 79 && grade < 88) {
+        System.out.println("You made a B....Good Job");
+    } else if (grade > 87 && grade < 100) {
+        System.out.println("You made an A.....AWESOME !");
+    } else if (grade == 100) {
+        System.out.println("PERFECT SCORE !!! 🤘");
+    } else {
+        System.out.println("Try Again");
+    }
+    System.out.println("Continue ? Y/N");
+    cont = grades.next();
+}while (cont.equals("y"));
 
 
 
