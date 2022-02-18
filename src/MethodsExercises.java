@@ -48,6 +48,7 @@ public class MethodsExercises {
         if (confirm.equals("Y")){
             dice(sides1, sides2);
         }
+        
 
 
     }
@@ -110,6 +111,7 @@ public class MethodsExercises {
     int roll2_i = (int) roll2;
         System.out.printf("First die rolled: %s%nSecond die rolled: %s", roll1_i, roll2_i);
     return sides1 + sides2;
+
     }
 
 }
