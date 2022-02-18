@@ -48,7 +48,7 @@ public class MethodsExercises {
         if (confirm.equals("Y")){
             dice(sides1, sides2);
         }
-        
+
 
 
     }
