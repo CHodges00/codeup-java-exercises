@@ -7,25 +7,25 @@ public class RPG {
     public static void main(String[] args) {
 
         Scanner scan = new Scanner(System.in);
-        System.out.println("Would you like to begin ? y/n");
+        System.out.println("Would you like to begin ? Y/N");
         String start = scan.nextLine();
 
 
 //        COMMANDS
-        String attack = "Attack";
-        String potion = "Potion";
-        String run = "Run";
+        String attack = "A";
+        String potion = "P";
+        String run = "R";
         String continueOn = "What will you do ? Options : A = Attack, P = Potion, R = Run";
 
 //       RANDOM # OF POTIONS, POTION HEAL, ATTACK DAMAGE
         double random = Math.random();
         double random2 = Math.random();
-        int potions = (int) (random * 5);
+        int potions = (int) (random * 2);
 
         int playerHealth = (int) (random * 150) + 50;
         int enemyHealth = (int) (random2 * 150) + 50;
 
-        if (start.equals("y")) {
+        if (start.equalsIgnoreCase("Y")) {
             System.out.printf(" 🩸 Your health = %s%n", playerHealth);
             System.out.printf(" 🖤 Enemy health = %s%n", enemyHealth);
             System.out.printf(" 🍄 You are gifted %s potion(s)%n", potions);
@@ -51,8 +51,9 @@ public class RPG {
                     System.out.printf(" 🍄 Give player %s health%n", potionHeal);
                     playerHealth += potionHeal;
                     potions -= 1;
-                    System.out.printf("Potions remaining = %s%n", potions);
                     System.out.printf(" 🩸 Your health = %s%n", playerHealth);
+                    System.out.printf("Potions remaining = %s%n", potions);
+
                 }
             } else if (option.equalsIgnoreCase(run)) {
                 System.out.println("COWARD 🏃🏻💨💨");
@@ -75,9 +76,9 @@ public class RPG {
         if (enemyHealth < 0 || playerHealth < 0) {
             System.out.println("----------- GAME OVER -----------");
             if (enemyHealth > playerHealth) {
-                System.out.println("❌ DEFEAT ❌");
+                System.out.println("-----------❌ DEFEAT ❌-----------");
             } else {
-                System.out.println("🎉 WINNER 🎉");
+                System.out.println("-----------🎉 WINNER 🎉-----------");
             }
         }
 
@@ -87,7 +88,7 @@ public class RPG {
 
     public static int POTION() {
         double random = Math.random();
-        int num = (int) (random * 50) + 5;
+        int num = (int) (random * 100) + 20;
         return num;
     }
 
