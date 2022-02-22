@@ -8,7 +8,7 @@ public class Person {
 
     public String first;
     public String last;
-    private int age;
+    public int age;
     public String relationship;
 
     //FIELDS AS METHODS
@@ -24,42 +24,46 @@ public class Person {
 
     //    USER PROVIDES FIRST,LAST AND NOT AGE,RELATIONSHIP YET
     public Person(String firstInput, String lastInput) {
-        first = firstInput;
-        last = lastInput;
-        age = 0;
-        relationship = "Undefined";
+        this.first = firstInput;
+        this.last = lastInput;
+        this.age = 0;
+        this.relationship = "Undefined";
     }
 
-    public Person() {
-//        DEFAULT
+    //    USER REGISTERS AND ENTERS ALL POTENTIAL FIELDS
+//    USING THIS() METHOD CONSTRUCTOR CALL
+    public Person(String firstInput, String lastInput, int ageInput, String relationshipInput) {
+        this(firstInput, lastInput);
+        this.age = ageInput;
+        this.relationship = relationshipInput;
     }
 
 
-    public static void main(String[] args) {
-//        INSTANCE OF PERSON
-        Person Tom = new Person();
-//        FILLED PERSON PROPERTIES WITH VARIABLES
-        Tom.first = "Tom";
-        Tom.last = "Tommy";
-        Tom.age = 32;
-        Tom.relationship = "Taken";
-
-//        RESULTS FROM OBJECT WITH VALUES FROM PROPERTIES
-        System.out.println("Tom.first = " + Tom.first);
-        System.out.println("Tom.last = " + Tom.last);
-        System.out.println("Tom.age = " + Tom.age);
-        System.out.println("Tom.relationship = " + Tom.relationship);
-        System.out.println(Tom.sayHello());
-        System.out.println("--------------------------------------------------");
-
-        Person Cody = new Person();
-        Cody.first = "Cody";
-        Cody.last = "Hastings";
-
-        System.out.println("Cody.first = " + Cody.first);
-        System.out.println("Cody.last = " + Cody.last);
-        System.out.println(Cody.sayHello());
-    }
+//    public static void main(String[] args) {
+////        INSTANCE OF PERSON
+//        Person Tom = new Person();
+////        FILLED PERSON PROPERTIES WITH VARIABLES
+//        Tom.first = "Tom";
+//        Tom.last = "Tommy";
+//        Tom.age = 32;
+//        Tom.relationship = "Taken";
+//
+////        RESULTS FROM OBJECT WITH VALUES FROM PROPERTIES
+//        System.out.println("Tom.first = " + Tom.first);
+//        System.out.println("Tom.last = " + Tom.last);
+//        System.out.println("Tom.age = " + Tom.age);
+//        System.out.println("Tom.relationship = " + Tom.relationship);
+//        System.out.println(Tom.sayHello());
+//        System.out.println("--------------------------------------------------");
+//
+//        Person Cody = new Person();
+//        Cody.first = "Cody";
+//        Cody.last = "Hastings";
+//
+//        System.out.println("Cody.first = " + Cody.first);
+//        System.out.println("Cody.last = " + Cody.last);
+//        System.out.println(Cody.sayHello());
+//    }
 
 
 }
