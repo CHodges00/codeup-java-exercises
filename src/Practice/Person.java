@@ -66,4 +66,15 @@ public class Person {
 //    }
 
 
+///////   VISIBILITY    ////////
+// CONSTRUCTORS = PUBLIC
+// FIELDS WILL BE PUBLIC, PRIVATE, OR STATIC
+
+
+
+
+
+
+
+
 }

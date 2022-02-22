@@ -31,6 +31,12 @@ public class LectureEnvironment {
         System.out.println();
         System.out.printf("Your new users' name is %s %s, they are %s y/o, and their relationship status is %s", newestUser.first, newestUser.last, newestUser.age, newestUser.relationship);
 
+
+
+
+
+
+
     }
 
 }
