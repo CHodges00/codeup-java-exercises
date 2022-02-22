@@ -1,3 +1,5 @@
+package Practice;
+
 //CLASS
 public class Person{
 // FIELDS AS VARIABLES
