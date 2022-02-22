@@ -1,4 +1,3 @@
-
 //CLASS
 public class Person{
 // FIELDS AS VARIABLES
@@ -8,7 +7,7 @@ public class Person{
     private int age;
     public String relationship;
 
-    //FIELDS AS METHODS
+//FIELDS AS METHODS
     public String sayHello(){
         return String.format("Hello from %s %s", first, last);
     }
@@ -39,5 +38,8 @@ public class Person{
         System.out.println("Cody.last = " + Cody.last);
         System.out.println(Cody.sayHello());
     }
+
+
+
 
 }
