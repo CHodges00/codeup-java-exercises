@@ -47,8 +47,6 @@ public class ConsoleExercises {
         int volume = length_int * width_int * height_int;
         System.out.printf("Volume: %s%n", volume);
 
-
-
     }
 
 }
