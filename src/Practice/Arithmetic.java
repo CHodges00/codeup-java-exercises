@@ -1,6 +1,6 @@
 package Practice;
 
-public class Arithimetic {
+public class Arithmetic {
 
     public static double pi = 3.1412;
 
@@ -8,6 +8,8 @@ public class Arithimetic {
         return x + y;
     }
 
-
+    public static void main(String[] args) {
+        System.out.println(pi);
+    }
 
 }

@@ -1,7 +1,9 @@
 package Practice;
 
 //CLASS
-public class Person{
+public class Person {
+
+
 // FIELDS AS VARIABLES
 
     public String first;
@@ -9,9 +11,27 @@ public class Person{
     private int age;
     public String relationship;
 
-//FIELDS AS METHODS
-    public String sayHello(){
+    //FIELDS AS METHODS
+    public String sayHello() {
         return String.format("Hello from %s %s", first, last);
+    }
+
+    //    PRINT MESSAGE EACH TIME A PERSON OBJECT IS CREATED
+//    CONSTRUCTOR
+//    public Person(){
+//        System.out.println("A Person has been INSTANTIATED");
+//    }
+
+    //    USER PROVIDES FIRST,LAST AND NOT AGE,RELATIONSHIP YET
+    public Person(String firstInput, String lastInput) {
+        first = firstInput;
+        last = lastInput;
+        age = 0;
+        relationship = "Undefined";
+    }
+
+    public Person() {
+//        DEFAULT
     }
 
 
@@ -40,8 +60,6 @@ public class Person{
         System.out.println("Cody.last = " + Cody.last);
         System.out.println(Cody.sayHello());
     }
-
-
 
 
 }
