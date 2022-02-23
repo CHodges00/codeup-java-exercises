@@ -69,7 +69,6 @@ public class Input {
 
 // RETURN DOUBLE ENTERED
  public double getDouble(){
-     System.out.println("Enter a decimal: ");
      return this.scan.nextDouble();
  }
 
