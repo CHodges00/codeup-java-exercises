@@ -1,24 +1,23 @@
 package shapes;
-import java.lang.Math;
-class Circle {
 
-    private int radius;
+public class Circle {
 
-    public Circle(int radius){
+    private double radius;
+
+
+    public Circle(double radius) {
         this.radius = radius;
     }
 
-    public Circle(double radius){
-        this.radius = (int) radius;
+
+    public double getArea() {
+        return Math.PI * (this.radius * this.radius);
     }
 
-    public double getArea(){
-        int area = pi * (radius ^ 2);
-        return area;
+
+    public double getCircumference() {
+        return (2 * Math.PI) * this.radius;
     }
 
-    public double getCircumference(){
-
-    }
 
 }
