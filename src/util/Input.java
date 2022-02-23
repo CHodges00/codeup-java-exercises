@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class Input {
 
-    private Scanner scan = new Scanner(System.in);
+    private Scanner scan;
 
     public String getString() {
         System.out.println("Enter String: ");
@@ -77,7 +77,7 @@ public class Input {
     }
 
 
-    double getDouble() {
+    public double getDouble() {
         System.out.println("Enter Decimal");
         return scan.nextDouble();
     }
