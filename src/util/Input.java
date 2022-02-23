@@ -1,6 +1,5 @@
 package util;
 
-import java.nio.file.LinkPermission;
 import java.util.Scanner;
 
 
@@ -8,50 +7,52 @@ public class Input {
 
     private Scanner scan = new Scanner(System.in);
 
-    String getString() {
-    scan = new Scanner(System.in);
+    public String getString() {
         System.out.println("Enter String: ");
-        String input = scan.nextLine();
-        return input;
+        return scan.nextLine();
     }
 
-    boolean yesNo() {
-        scan = new Scanner(System.in);
+    public boolean yesNo() {
         System.out.println("Enter Y,y,Yes or yes");
         String input = scan.nextLine();
-        return input.equals("y") || input.equals("Y") || input.equals("Yes") || input.equals("yes");
+        if (input.equals("y") || input.equals("Y") || input.equals("Yes") || input.equals("yes")) {
+            return true;
+        } else {
+            return false;
+        }
     }
 
-//    int getInt(int min, int max) {
+
+//    public int getInt(int min, int max) {
 //        scan = new Scanner(System.in);
+//        String cont = "Keep Going";
 //        do {
-//            System.out.printf("Guess number between %s--%s", min, max);
+//            System.out.printf("Enter number between %s--%s%n", min, max);
 //            int userGuess = scan.nextInt();
 //
-//            if (userGuess < min){
+//            if (userGuess < min) {
 //                System.out.println("Too low Joe");
-//            }else if (userGuess > max){
+//                System.out.println(cont);
+//            } else if (userGuess > max) {
 //                System.out.println("Too high guy");
-//            }else {
+//                System.out.println(cont);
+//            } else {
+//                cont = "Done";
+//                System.out.println(cont);
 //                break;
 //            }
-//
-//        }while ();
-//
+//        } while (cont.equals("Keep Going"));
 //    }
 
-    int getInt() {
-        scan = new Scanner(System.in);
+
+    public int getInt() {
         System.out.println("Enter #");
-        int input = scan.nextInt();
-        return input;
+        return scan.nextInt();
     }
 
 //    double getDouble(double min, double max) {
-//        scan = new Scanner(System.in);
-//        System.out.printf("Enter decimal between %s -- %s", min, max);
 //        do {
-//            System.out.printf("Guess number between %s--%s", min, max);
+//            System.out.printf("Enter number between %s--%s", min, max);
 //            int userGuess = scan.nextInt();
 //
 //            if (userGuess < min){
@@ -67,18 +68,12 @@ public class Input {
 //    }
 
     double getDouble() {
-        scan = new Scanner(System.in);
         System.out.println("Enter Decimal");
-        double input = scan.nextDouble();
-        return input;
+        return scan.nextDouble();
     }
+
 
 }
-    class InputTest {
-        public static void main(String[] args) {
-
-        }
-    }
 
 
 //NEED TO RESTART, MISTAKES WERE MADE...........
