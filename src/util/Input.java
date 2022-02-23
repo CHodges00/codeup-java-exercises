@@ -5,83 +5,50 @@ import java.util.Scanner;
 
 public class Input {
 
-    private Scanner scan;
+    private final Scanner scan;
 
-    public String getString() {
-        System.out.println("Enter String: ");
-        return scan.nextLine();
-    }
+ public Input(){
+     this.scan = new Scanner(System.in);
+ }
 
-    public boolean yesNo() {
-        System.out.println("Enter Y,y,Yes or yes");
-        String input = scan.nextLine();
-        if (input.equals("y") || input.equals("Y") || input.equals("Yes") || input.equals("yes")) {
-            return true;
-        } else {
-            return false;
-        }
-    }
+ public String getString(){
+     System.out.println("Enter string: ");
+     return this.scan.nextLine();
+ }
 
+ public boolean yesNo(){
+     System.out.println("Y -- N ?");
+     String input = this.scan.next();
+     return input.equalsIgnoreCase("y") || input.equalsIgnoreCase("yes");
+ }
 
-    public int getInt(int min, int max) {
-        scan = new Scanner(System.in);
-        String cont = "Keep Going";
-        int userGuess = 0;
+ public int getInt(int min, int max){
+     int input;
+     do {
+         System.out.printf("Enter # between %s - %s%n", min, max);
+         input = this.scan.nextInt();
+     }while (input < min || input >max);
+     return input;
+ }
 
-        do {
-            System.out.printf("Enter number between %s--%s%n", min, max);
-            userGuess = scan.nextInt();
+ public int getInt(){
+     System.out.println("Enter #: ");
+     return this.scan.nextInt();
+ }
 
-            if (userGuess < min) {
-                System.out.println("Too low Joe");
-                System.out.println(cont);
-            } else if (userGuess > max) {
-                System.out.println("Too high guy");
-                System.out.println(cont);
-            } else {
-                cont = "Done";
-                System.out.println(cont);
-                break;
-            }
-        } while (cont.equals("Keep Going"));
-        return userGuess;
-    }
+ public double getDouble(double min, double max){
+     double input;
+     do {
+         System.out.printf("Enter a decimal between %s - %s%n", min, max);
+         input = this.scan.nextDouble();
+     }while (input < min || input > max);
+     return input;
+ }
 
-
-    public int getInt() {
-        System.out.println("Enter integer");
-        return scan.nextInt();
-    }
-
-    double getDouble(double min, double max) {
-        scan = new Scanner(System.in);
-        String cont = "Keep Going";
-        double userGuess = 0.0;
-        do {
-            System.out.printf("Enter number between %s--%s%n", min, max);
-            userGuess = scan.nextDouble();
-
-            if (userGuess < min) {
-                System.out.println("Too low Joe");
-                System.out.println(cont);
-            } else if (userGuess > max) {
-                System.out.println("Too high guy");
-                System.out.println(cont);
-            } else {
-                cont = "Done";
-                System.out.println(cont);
-                break;
-            }
-        } while (cont.equals("Keep Going"));
-        return userGuess;
-    }
-
-
-    public double getDouble() {
-        System.out.println("Enter Decimal");
-        return scan.nextDouble();
-    }
-
+ public double getDouble(){
+     System.out.println("Enter a decimal: ");
+     return this.scan.nextDouble();
+ }
 
 }
 

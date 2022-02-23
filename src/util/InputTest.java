@@ -4,24 +4,24 @@ public class InputTest {
 
     public static void main(String[] args) {
 
-        Input newInput1 = new Input();
-        System.out.println(newInput1.getString());
+        Input input = new Input();
+
+        System.out.println(input.getString());
 
 
-        Input newInput2 = new Input();
-        System.out.println(newInput2.yesNo());
+        System.out.println(input.yesNo());
 
-        Input newInput3 = new Input();
-        System.out.println(newInput3.getInt(1, 10));
 
-        Input newInput4 = new Input();
-        System.out.println(newInput4.getInt());
+        System.out.println(input.getInt(1, 10));
 
-        Input newInput5 = new Input();
-        System.out.println(newInput5.getDouble(1.1, 10.1));
 
-        Input newInput6 = new Input();
-        System.out.println(newInput6.getDouble());
+        System.out.println(input.getInt());
+
+
+        System.out.println(input.getDouble(1.1, 10.1));
+
+
+        System.out.println(input.getDouble());
     }
 
 }
