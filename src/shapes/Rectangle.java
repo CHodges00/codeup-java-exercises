@@ -1,29 +1,28 @@
 package shapes;
 
-public class Rectangle {
-
-    int width;
-    int height;
+class Rectangle {
 
 
-    public Rectangle(int width, int height){
+    public int width;
+    public int length;
+
+
+    public Rectangle(int width, int length){
         this.width = width;
-        this.height = height;
+        this.length = length;
+
     }
 
-    public int getWidth() {
-        return width;
+
+
+
+    public int getPerimeter(){
+        int perimeter = (2*this.width)+(2*this.length);
+        return perimeter;
     }
 
-    public void setWidth(int width) {
-        this.width = width;
-    }
-
-    public int getHeight() {
-        return height;
-    }
-
-    public void setHeight(int height) {
-        this.height = height;
+    public int getArea() {
+        int area = this.length * this.width;
+        return area;
     }
 }
