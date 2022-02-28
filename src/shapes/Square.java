@@ -9,11 +9,9 @@ class Square extends Quadrilateral{
     }
 
     void setLength(int length) {
-
     }
 
 
     void setWidth(int width) {
-
     }
 }
