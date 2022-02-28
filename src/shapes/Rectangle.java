@@ -1,25 +1,15 @@
 package shapes;
 
-class Rectangle {
+public class Rectangle extends Shape implements Measurable{
 
-    protected int length;
-    protected int width;
 
-    public Rectangle(int width, int length) {
-        this.width = width;
-        this.length = length;
+    @Override
+    public double perimeter() {
+        return perimeter();
     }
 
-    public Rectangle() {
+    @Override
+    public double area() {
+        return area();
     }
-
-    public int perimeter() {
-        return (2 * width) + (2 * length);
-    }
-
-    public int area() {
-        return length * width;
-    }
-
-
 }
