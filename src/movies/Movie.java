@@ -5,7 +5,11 @@ public class Movie {
     private String name;
     private String category;
 
-//    GETTERS
+    public Movie(String name, String category) {
+
+    }
+
+    //    GETTERS
     public String getName() {
         return name;
     }
@@ -13,7 +17,7 @@ public class Movie {
         return category;
     }
 
-//    SETTERS
+    //    SETTERS
     public void setName(String name) {
         this.name = name;
     }
