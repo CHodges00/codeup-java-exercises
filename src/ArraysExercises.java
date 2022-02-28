@@ -18,7 +18,7 @@ public class ArraysExercises {
         }
 
         System.out.println("==================");
-        
+
         Person person4 = new Person("Gerald");
         People = addPerson(People, person4);
         for (int i = 0; i < People.length; i++){
