@@ -17,14 +17,39 @@ public class ArraysPractice {
     }
 
 
+    //        TODO: Write a program that creates an array, and then prints the sum of the even and odd integers in a new array [sumOdd, sumEven]
+    public static int[] sums() {
+        int[] warmUp = {3,1,7,2,8,3,5};
+        int evens = 0;
+        int odds = 0;
+        int[] evenOdd = new int[2];
+
+//        NORMAL FOR LOOP ,UST USE ARR[INDEX] TO SELECT ITEM IN ARRAY
+//        for (int i = 0; i < warmUp.length; i++) {
+//            if (warmUp[i] % 2 == 0) {
+//                evens += warmUp[i];
+//            } else {
+//                odds += warmUp[i];
+//            }
+//        }
+
+//        ENHANCED FOR LOOP CAN USE JUST I
+        for (int i : warmUp){
+            if (i % 2 == 0) {
+                evens += i;
+            } else {
+                odds += i;
+            }
+        }
+        evenOdd[0] = evens;
+        evenOdd[1] = odds;
+        return evenOdd;
+    }
 
 
-
-
-
-
-    
     public static void main(String[] args) {
+
+        System.out.println(Arrays.toString(sums()));
 
 //      LENGTH OF ARRAYS MUST BE DEFINED IN JAVA
 //      DATA TYPES MUST ALSO BE DECLARED FOR ARRAY
@@ -78,8 +103,45 @@ public class ArraysPractice {
 
 //         TODO: PRINT RETURN FOR ADD() METHOD // 210
         System.out.println(add());
+        System.out.println("=============================================");
+
+
+
+
+        //    TODO: TWO-DIMENSIONAL ARRAYS
+//    {
+//        [X][X][X][X],
+//        [X][X][X][X],
+//        [X][X][X][X]
+//    }
+        int[][] myMatrix = {
+                {4,7,9},
+                {1,5,9},
+                {2,2,7}
+        };
+        System.out.println(Arrays.deepToString(myMatrix));
+
+//            LOOP THROUGH OUTERMOST ARRAY TO GET INNER ARRAYS AS "ROW"
+        for (int[] row : myMatrix){
+            System.out.println("New row -----------");
+            System.out.println(Arrays.toString(row));
+//            LOOP THROUGH INNER ARRAYS TO GET VALUES OF INT'S INSIDE OF ARRAYS("ROW")
+            for (int column: row){
+                System.out.println(column);
+            }
+        }
+
+
+//        =============
+        int[][] newMatrix = new int[4][4];
+        newMatrix[0][0] = 8;
+        newMatrix[3][3] = 2;
+        newMatrix[2][1] = 9;
+        System.out.println(Arrays.deepToString(newMatrix));
+
+
+
+
 
     }
-
-
 }
