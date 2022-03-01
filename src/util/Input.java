@@ -2,77 +2,60 @@ package util;
 
 import java.util.Scanner;
 
-
 public class Input {
+    private Scanner scanner;
 
-    private final Scanner scan;
+    public Input() {
+        this.scanner = new Scanner(System.in);
+    }
 
-//    CREATES INSTANCE OF SCANNER
- public Input(){
-     this.scan = new Scanner(System.in);
- }
+    public String getString() {
+        return this.scanner.nextLine();
+    }
 
+    public boolean yesNo() {
+        System.out.println("yes or no?");
+        String userEntry = this.scanner.next();
+        return userEntry.contains("y");
+    }
 
-// ENTER STRING AND RETURN ENTRY
- public String getString(){
-     System.out.println("Enter string: ");
-     return this.scan.nextLine();
- }
+    public boolean yesNo(String prompt) {
+        System.out.println(prompt);
+        String userEntry = this.scanner.next();
+        return userEntry.contains("y");
+    }
 
-
-// RETURN T/F IF EQUALS YES/NO
- public boolean yesNo(){
-     System.out.println("Y -- N ?");
-     String input = this.scan.next();
-     return input.equalsIgnoreCase("y") || input.equalsIgnoreCase("yes");
- }
-
-
-// ENTER INT BETWEEN MIN/MAX
- public int getInt(int min, int max){
-     int input;
-     do {
-         System.out.printf("Enter # between %s - %s%n", min, max);
-         input = this.scan.nextInt();
-         if (input < min){
-             System.out.println("Too low");
-         }else if (input > max){
-             System.out.println("Too High");
-         }
-     }while (input < min || input >max);
-     return input;
- }
+    public int getInt(int min, int max) {
+        int userInput;
+        do {
+            System.out.printf("Enter a number betwixt %s and %s!\n", min, max);
+            userInput = this.scanner.nextInt();
+        } while (userInput < min || userInput > max);
+        return userInput;
+    }
 
 
-// RETURN INT ENTERED
- public int getInt(){
-     System.out.println("Enter #: ");
-     return this.scan.nextInt();
- }
+    public int getInt() {
+//        System.out.println("Enter an integer:  ");
+        return this.scanner.nextInt();
+    }
 
+    public int getInt(String prompt) {
+        System.out.println(prompt);
+        return this.scanner.nextInt();
+    }
 
-// ENTER DOUBLE BETWEEN MIN/MAX
- public double getDouble(double min, double max){
-     double input;
-     do {
-         System.out.printf("Enter a decimal between %s - %s%n", min, max);
-         input = this.scan.nextDouble();
-         if (input < min){
-             System.out.println("Too low");
-         }else if (input > max){
-             System.out.println("Too High");
-         }
-     }while (input < min || input > max);
-     return input;
- }
+    public double getDouble(double min, double max) {
+        double userInput;
+        do {
+            System.out.printf("Enter un doble betwixt %s and %s!\n", min, max);
+            userInput = this.scanner.nextDouble();
+        } while (userInput <= min || userInput >= max);
+        return userInput;
+    }
 
-
-// RETURN DOUBLE ENTERED
- public double getDouble(){
-     return this.scan.nextDouble();
- }
-
+    public double getDouble(){
+        System.out.println("Enter a double:  ");
+        return this.scanner.nextDouble();
+    }
 }
-
-
-//NEED TO RESTART, MISTAKES WERE MADE...........
