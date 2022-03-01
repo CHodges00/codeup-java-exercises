@@ -26,4 +26,8 @@ public class Movie {
     public void setCategory() {
         this.category = category;
     }
+
+    public String toString(){
+        return name + " -- "  + category;
+    }
 }

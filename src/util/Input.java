@@ -13,6 +13,11 @@ public class Input {
         return this.scanner.nextLine();
     }
 
+    public String getString(String prompt){
+        System.out.println(prompt);
+        return this.scanner.nextLine();
+    }
+
     public boolean yesNo() {
         System.out.println("yes or no?");
         String userEntry = this.scanner.next();
@@ -42,7 +47,9 @@ public class Input {
 
     public int getInt(String prompt) {
         System.out.println(prompt);
-        return this.scanner.nextInt();
+        int userInput = 0;
+        userInput = Integer.parseInt(scanner.nextLine());
+        return userInput;
     }
 
     public double getDouble(double min, double max) {
