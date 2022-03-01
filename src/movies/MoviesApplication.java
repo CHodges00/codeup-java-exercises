@@ -54,12 +54,12 @@ public class MoviesApplication {
         System.out.println("============================");
         System.out.println("What would you like to do?");
         System.out.println("============================");
-        System.out.println("0 - view all movies");
-        System.out.println("1 - view musicals movies");
-        System.out.println("2 - view scifi movies");
-        System.out.println("3 - view horror movies");
-        System.out.println("4 - view drama movies");
-        System.out.println("5 - view animated movies");
+        System.out.println("0 - see [all]");
+        System.out.println("1 - see [musicals]");
+        System.out.println("2 - see [scifi]");
+        System.out.println("3 - see [horror]");
+        System.out.println("4 - see [drama]");
+        System.out.println("5 - see [animated]");
         System.out.println("6 = Add movie");
         System.out.println("7 - exit");
         System.out.println("=============================");
