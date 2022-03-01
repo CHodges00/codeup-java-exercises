@@ -4,13 +4,14 @@ import util.Input;
 
 public class MoviesApplication {
     public static Input input = new Input();
+
     public static void main(String[] args) {
         movieSelection();
 
     }
 
 
-    private static void movieSelection(){
+    private static void movieSelection() {
         Movie[] moviesArray = MoviesArray.findAll();
         boolean cont = true;
         int choice = 0;
@@ -24,24 +25,26 @@ public class MoviesApplication {
                     }
                     break;
                 case 1:
-                    viewByCategory("musical");
+                    viewCategory("musical");
                     break;
                 case 2:
-                    viewByCategory("scifi");
-                break;
+                    viewCategory("scifi");
+                    break;
                 case 3:
-                   viewByCategory("horror");
-                break;
+                    viewCategory("horror");
+                    break;
                 case 4:
-                    viewByCategory("drama");
+                    viewCategory("drama");
                     break;
                 case 5:
-                    viewByCategory("animated");
+                    viewCategory("animated");
                     break;
                 case 6:
+                    addMovie();
+                case 7:
                     cont = false;
-                System.out.println("Come back soon !");
-                break;
+                    System.out.println("Come back soon !");
+                    break;
             }
         }
     }
@@ -52,18 +55,19 @@ public class MoviesApplication {
         System.out.println("What would you like to do?");
         System.out.println("============================");
         System.out.println("0 - view all movies");
-        System.out.println("1 - view movies in the musicals category");
-        System.out.println("5 - view movies in the scifi category");
-        System.out.println("4 - view movies in the horror category");
-        System.out.println("3 - view movies in the drama category");
-        System.out.println("2 - view movies in the animated category");
-        System.out.println("6 - exit");
+        System.out.println("1 - view musicals movies");
+        System.out.println("2 - view scifi movies");
+        System.out.println("3 - view horror movies");
+        System.out.println("4 - view drama movies");
+        System.out.println("5 - view animated movies");
+        System.out.println("6 = Add movie");
+        System.out.println("7 - exit");
         System.out.println("=============================");
 
     }
 
-    public static void viewByCategory(String category) {
-        for (Movie movie : MoviesArray.findAll()){
+    public static void viewCategory(String category) {
+        for (Movie movie : MoviesArray.findAll()) {
             if (movie.getCategory().equalsIgnoreCase(category)) {
                 System.out.printf("%s = %s\n", movie.getName(), movie.getCategory());
             }
@@ -74,6 +78,16 @@ public class MoviesApplication {
     public static int userChoice() {
         return input.getInt("What movies would you like to display ?");
     }
+
+    public static Movie addMovie() {
+        System.out.println("Enter name - ");
+        String name = input.getString();
+        System.out.println("Enter category - ");
+        String category = input.getString();
+        return new Movie(name, category);
+    }
+
+
 
 }
 
