@@ -1,29 +1,29 @@
+
+
 package movies;
 
 public class Movie {
-
     private String name;
     private String category;
 
     public Movie(String name, String category) {
-
+        this.name = name;
+        this.category = category;
     }
 
-    //    GETTERS
     public String getName() {
         return name;
     }
+
+    public void setName() {
+        this.name = name;
+    }
+
     public String getCategory() {
         return category;
     }
 
-    //    SETTERS
-    public void setName(String name) {
-        this.name = name;
-    }
-    public void setCategory(String category) {
+    public void setCategory() {
         this.category = category;
     }
-
-
 }
