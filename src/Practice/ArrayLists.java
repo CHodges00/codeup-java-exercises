@@ -1,6 +1,7 @@
 package Practice;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 public class ArrayLists {
     public static void main(String[] args) {
@@ -65,4 +66,31 @@ public class ArrayLists {
         System.out.println("favNumbers = " + favNumbers);
         System.out.println("==============================");
     }
+
+
+    public static class HashmapExample {
+
+        public static void main(String[] args) {
+HashMap<String, String> authorsBooks = new java.util.HashMap<>();
+
+
+
+//    HASHMAPS
+            System.out.println("HASHMAPS ===========");
+
+            authorsBooks.put("Kurt", "Cat craddle");
+            authorsBooks.put("Sal", "Franny book");
+
+            System.out.println("authorsBooks.get(\"Kurt\") = " + authorsBooks.get("Kurt"));
+            System.out.println("authorsBooks.get(\"Sal\") = " + authorsBooks.get("Sal"));
+        }
+    }
+
+
+
+
+
+
+
 }
+

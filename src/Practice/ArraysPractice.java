@@ -153,7 +153,7 @@ public class ArraysPractice {
 //    - once the user has entered all items, print out all items grouped by
 //      category and alphabetized in each group
 
-//TODO: Build a command line Tic Tac Toe game.
+// Build a command line Tic Tac Toe game.
 
 //    - the game board should be a multi-dimensional array of Strings
 //    - be sure the board displays the column letter and row number:
