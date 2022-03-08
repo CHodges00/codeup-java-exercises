@@ -16,13 +16,13 @@ public class InputTest {
 //        System.out.println(input.getInt(1, 10));
 //
 //        RETURNS INT ENTERED
-//        System.out.println(input.getInt());
+        System.out.println(input.getInt());
 //
 ////        RETURNS DOUBLE IF ENTERED BETWEEN MIN/MAX
 //        System.out.println(input.getDouble(1.1, 10.1));
 //
 ////        RETURNS DOUBLE ENTERED
-        System.out.println(input.getDouble());
+//        System.out.println(input.getDouble());
 //    }
 
 }
