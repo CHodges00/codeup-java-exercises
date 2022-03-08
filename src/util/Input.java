@@ -10,12 +10,12 @@ public class Input {
     }
 
     public String getString() {
-        return this.scanner.nextLine();
+        return scanner.nextLine();
     }
 
-    public String getString(String prompt){
+    public String getString(String prompt) {
         System.out.println(prompt);
-        return this.scanner.nextLine();
+        return scanner.nextLine();
     }
 
     public boolean yesNo() {
@@ -33,16 +33,19 @@ public class Input {
     public int getInt(int min, int max) {
         int userInput;
         do {
-            System.out.printf("Enter a number betwixt %s and %s!\n", min, max);
-            userInput = this.scanner.nextInt();
+            System.out.printf("Enter a number between %s and %s!\n", min, max);
+            userInput = Integer.parseInt(getString());
         } while (userInput < min || userInput > max);
         return userInput;
     }
 
 
     public int getInt() {
-//        System.out.println("Enter an integer:  ");
-        return this.scanner.nextInt();
+        try {
+            return Integer.parseInt(getString());
+        } catch (NumberFormatException e) {
+            throw new NumberFormatException("Not an int");
+        }
     }
 
     public int getInt(String prompt) {
@@ -55,14 +58,17 @@ public class Input {
     public double getDouble(double min, double max) {
         double userInput;
         do {
-            System.out.printf("Enter un doble betwixt %s and %s!\n", min, max);
+            System.out.printf("Enter a double between %s and %s!\n", min, max);
             userInput = this.scanner.nextDouble();
         } while (userInput <= min || userInput >= max);
         return userInput;
     }
 
     public double getDouble(){
-        System.out.println("Enter a double:  ");
-        return this.scanner.nextDouble();
+        try {
+            return Double.parseDouble(getString());
+        }catch (NumberFormatException e){
+            throw new NumberFormatException("Not a double");
+        }
     }
 }
