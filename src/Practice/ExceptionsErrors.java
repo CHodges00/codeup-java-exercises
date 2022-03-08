@@ -2,6 +2,10 @@ package Practice;
 
 public class ExceptionsErrors {
 
+    public static void testMethod() {
+        System.out.println("Test Method to do something in catch");
+    }
+
 
     public static void main(String[] args) throws Exception {
 
@@ -52,13 +56,23 @@ public class ExceptionsErrors {
         }
 //THROWS RUNTIME EXCEPTION, ISN'T NULLPOINT EXCEPTION ON LINE 42 THAT WAS CREATED
 //VICE VERSA WITH LINE 43 UNCOMMENTED
-        catch (Exception exceptionObject) {
-            System.out.println("Generic exception");
-            System.out.println("Generic exception example = " + exceptionObject.getMessage());
-            exceptionObject.printStackTrace();
-        }
+//        ---------------------------------------------------------------
+//        catch (Exception exceptionObject) {
+//            System.out.println("Generic exception");
+//            System.out.println("Generic exception example = " + exceptionObject.getMessage());
+//            exceptionObject.printStackTrace();
+//        }
 //        ^ NOT SPECIFIC EXCEPTION ON LINE 42
 //        WILL CATCH MOST SPECIFIC EXCEPTION
+//        LEAST SPECIFIC = EXCEPTION / MORE SPECIFIC = RUNTIME / MOST = NULLPOINT
+//        -------------------------------------------------------------
+//        RUNS METHOD WHEN EXCEPTION IS CAUGHT
+        catch (Exception exceptionObject){
+            exceptionObject.printStackTrace();
+            ExceptionsErrors.testMethod();
+    }
+// END TRY/CATCH‹
+
     }
 
 
