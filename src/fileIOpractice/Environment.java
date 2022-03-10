@@ -6,6 +6,8 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.nio.file.StandardOpenOption;
+import java.util.Arrays;
 import java.util.List;
 
 
@@ -69,19 +71,29 @@ public static void printPoem(Path filepath) throws IOException{
             System.out.println("****** CREATED FILE ******");
         }
 
+//        WRITE TO FILES THAT EXIST
+//        MANIPULATE CONTENT IN FILES
+        System.out.println();
+        System.out.println("=========== WRITING INTO =============");
+        System.out.println("dataDirectoryAndFile = " + dataDirectoryAndFile);
 
+//        SET UP SOMETHING TO WRITE INTO FILE
 
+//        LIST OF STRINGS TO ADD
 
+        System.out.println();
+        List<String> groceryList = Arrays.asList("Coffee", "Milk", "Eggs", "Steak", "Pepper", "Salt", "-Cheese-");
+        System.out.println("groceryList = " + groceryList);
+        System.out.println();
 
+//        WRITE TO FILE
+//        OVERWRITES ALL CONTENT EACH TIME ARRAYLIST IS ADDED TO
+        Files.write(dataDirectoryAndFile, groceryList);
 
-
-
-
-
-
-
-
-
+//        UPDATE FILE
+//        APPENDS AS OPPOSED TO OVERWRITING FILE CONTENTS
+        List<String> forgotAGrocery = Arrays.asList("Muenster", "Gouda", "Cheddar");
+        Files.write(dataDirectoryAndFile, forgotAGrocery, StandardOpenOption.APPEND);
     }
 
 
