@@ -1,5 +1,7 @@
 package fileIOpractice;
 
+import jdk.swing.interop.SwingInterOpUtils;
+
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -36,6 +38,47 @@ public static void printPoem(Path filepath) throws IOException{
 
 //PASS FILE TO PRINT METHOD THAT LOOPS THROUGH LINES AND PRINTS FILE INTO CONSOLE
         printPoem(pathToTxt);
+
+
+//        TODO:
+//GET TO EXISTING FILE WITH CLASSES
+//CREATE FILE AND DIRECTORY PATH TO FILE
+
+//        STRING REPRESENTING WHAT DIRECTORY
+        String directory = "./src/fileIOpractice/data";
+//        STRING REPRESENTING FILE NAME
+        String fileName = "groceryList.txt";
+
+        System.out.println();
+        Path dataDirectory = Paths.get(directory); // Path file passed the directory to go in
+        Path dataDirectoryAndFile = Paths.get(directory, fileName);
+
+        System.out.println("dataDirectory = " + dataDirectory);
+        System.out.println("dataDirectoryAndFile = " + dataDirectoryAndFile);
+
+//         IF FILE DOESN'T EXIST, THEN CREATE IT
+        if (Files.notExists(dataDirectory)){
+            Files.createDirectories(dataDirectory);
+            System.out.println();
+            System.out.println("****** CREATED DIRECTORY ******");
+        }
+
+//        ^^ CREATE FILE
+        if (Files.notExists(dataDirectoryAndFile)){
+            Files.createFile(dataDirectoryAndFile);
+            System.out.println("****** CREATED FILE ******");
+        }
+
+
+
+
+
+
+
+
+
+
+
 
 
 
