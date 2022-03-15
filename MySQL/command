@@ -92,3 +92,21 @@ mysql -u root -p;
 
 \x
 -- Clean session context.
+
+
+
+
+
+-- PAGER OUTPUT
+pager less -~SFX
+
+d:
+-- go down a half page
+u:
+-- go up a half page
+j:
+-- scroll down one line
+k:
+-- scroll up one line
+/:
+-- search for a term
