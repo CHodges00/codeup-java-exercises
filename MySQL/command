@@ -1,0 +1,32 @@
+
+-- GET STARTED
+mysql.server status;
+mysql.server start;
+mysql.server stop;
+
+-- -U = USERNAME      -P = PASSWORD (codeup)
+mysql -u root -p;
+-- PASSWORD WON'T SHOW WHEN TYPING IN
+
+
+
+-- Note that all text commands must be first on line and end with ';'
+
+\h
+-- HELP PAGE WITH COMMANDS LISTED
+
+\q
+-- QUIT
+
+\?
+-- Synonym for `help'.
+
+\c
+-- Clear the current input statement.
+
+\r
+-- Reconnect to the server. Optional arguments are db and host.
+
+\d
+-- Set statement delimiter.
+
