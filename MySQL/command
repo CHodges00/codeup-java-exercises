@@ -1,96 +1,96 @@
 
 -- GET STARTED
-mysql.server status;
-mysql.server start;
-mysql.server stop;
+# mysql.server status;
+# mysql.server start;
+# mysql.server stop;
 
 -- -U = USERNAME      -P = PASSWORD (codeup)
-mysql -u root -p;
+# mysql -u root -p;
 -- PASSWORD WON'T SHOW WHEN TYPING IN
 
 
 
 -- Note that all text commands must be first on line and end with ';'
 
-\h
+# \h
 -- HELP PAGE WITH COMMANDS LISTED
 
-\q
+# \q
 -- QUIT
 
-\?
+# \?
 -- Synonym for `help'.
 
-\c
+# \c
 -- Clear the current input statement.
 
-\r
+# \r
 -- Reconnect to the server. Optional arguments are db and host.
 
-\d
+# \d
 -- Set statement delimiter.
 
-\e
+# \e
 -- Edit command with $EDITOR.
 
-\G
+# \G
 -- Send command to mysql server, display result vertically.
 
-\q
+# \q
 -- Exit mysql. Same as quit.
 
-\g
+# \g
 -- Send command to mysql server.
 
-\h
+# \h
 -- Display this help.
 
-\n
+# \n
 -- Disable pager, print to stdout.
 
-\t
+# \t
 -- Don't write into outfile.
 
-\P
+# \P
 -- Set PAGER [to_pager]. Print the query results via PAGER.
 
-\p
+# \p
 -- Print current command.
 
-\R
+# \R
 -- Change your mysql prompt.
 
-\q
+# \q
 -- Quit mysql.
 
-\#
+# \#
 -- Rebuild completion hash.
 
-\.
+# \.
 -- Execute an SQL script file. Takes a file name as an argument.
 
-\s
+# \s
 -- Get status information from the server.
 
-\!
+# \!
 -- Execute a system shell command.
 
-\T
+# \T
 -- Set outfile [to_outfile]. Append everything into given outfile.
 
-\u
+# \u
 -- Use another database. Takes database name as argument.
 
-\C
+# \C
 -- Switch to another charset. Might be needed for processing binlog with multi-byte charsets.
 
-\W
+# \W
 -- Show warnings after every statement.
 
-\w
+# \w
 -- Don't show warnings after every statement.
 
-\x
+# \x
 -- Clean session context.
 
 
@@ -98,15 +98,15 @@ mysql -u root -p;
 
 
 -- PAGER OUTPUT
-pager less -~SFX
+# pager less -~SFX
 
-d:
+# d:
 -- go down a half page
-u:
+# u:
 -- go up a half page
-j:
+# j:
 -- scroll down one line
-k:
+# k:
 -- scroll up one line
-/:
+# /:
 -- search for a term
