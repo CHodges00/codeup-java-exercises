@@ -252,8 +252,8 @@ public class solution {
         Scanner scan = new Scanner(System.in);
         String s = scan.nextLine();
         // Write your code here.
-
-        String[] stringarray = s.split("[^\\w]+");
+        String a = s.replaceAll("^\\s+","");
+        String[] stringarray = a.split("[!,? ._'@]+");
         int count = stringarray.length;
         System.out.println(count);
         for (String value : stringarray) {
