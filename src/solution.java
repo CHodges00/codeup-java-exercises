@@ -242,7 +242,7 @@ import java.util.Scanner;
 
 
 
-//Given a string, , matching the regular expression [A-Za-z !,?._'@]+,
+//Given a string, matching the regular expression [A-Za-z !,?._'@]+,
 //        split the string into tokens. We define a token to be one or more consecutive English alphabetic letters.
 //        Then, print the number of tokens, followed by each token on a new line.
 
@@ -253,8 +253,12 @@ public class solution {
         String s = scan.nextLine();
         // Write your code here.
 
+        String[] stringarray = s.split("[\\\\ ,?']");
+        int count = stringarray.length;
+        System.out.println(count);
+        for (String value : stringarray) {
+            System.out.println(value);
+        }
         scan.close();
-        System.out.println(s);
-
     }
 }
