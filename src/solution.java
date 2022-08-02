@@ -253,7 +253,7 @@ public class solution {
         String s = scan.nextLine();
         // Write your code here.
 
-        String[] stringarray = s.split("[\\\\ ,?']");
+        String[] stringarray = s.split("[^\\w]+");
         int count = stringarray.length;
         System.out.println(count);
         for (String value : stringarray) {
