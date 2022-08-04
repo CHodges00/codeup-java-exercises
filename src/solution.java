@@ -246,19 +246,47 @@ import java.util.Scanner;
 //        split the string into tokens. We define a token to be one or more consecutive English alphabetic letters.
 //        Then, print the number of tokens, followed by each token on a new line.
 
-public class solution {
+//public class solution {
+//
+//    public static void main(String[] args) {
+//        Scanner scan = new Scanner(System.in);
+//        String s = scan.nextLine();
+//        // Write your code here.
+//        String a = s.replaceAll("^\\s+","");
+//        String[] stringarray = a.split("[!,? ._'@]+");
+//        int count = stringarray.length;
+//        System.out.println(count);
+//        for (String value : stringarray) {
+//            System.out.println(value);
+//        }
+//        scan.close();
+//    }
+//}
 
-    public static void main(String[] args) {
-        Scanner scan = new Scanner(System.in);
-        String s = scan.nextLine();
-        // Write your code here.
-        String a = s.replaceAll("^\\s+","");
-        String[] stringarray = a.split("[!,? ._'@]+");
-        int count = stringarray.length;
-        System.out.println(count);
-        for (String value : stringarray) {
-            System.out.println(value);
-        }
-        scan.close();
-    }
-}
+//        Sum the lengths of A and B.
+//        Determine if A is lexicographically larger than B (i.e.: does A come before B in the dictionary?).
+//        Capitalize the first letter in A and B and print them on a single line, separated by a space.
+//
+//
+//public class solution {
+//
+//    public static void main(String[] args) {
+//
+//        Scanner sc=new Scanner(System.in);
+//        String A=sc.next();
+//        String B=sc.next();
+//
+//        int sum = (A.length() + B.length());
+//
+//        String aCap = A.substring(0, 1).toUpperCase() + A.substring(1);
+//        String bCap = B.substring(0, 1).toUpperCase() + B.substring(1);
+//
+//        System.out.println(sum);
+//        if(A.compareTo(B) < 0){
+//            System.out.println("No");
+//        }else{
+//            System.out.println("Yes");
+//        }
+//        System.out.println(aCap + " " + bCap);
+//    }
+//}
