@@ -290,3 +290,20 @@ import java.util.Scanner;
 //        System.out.println(aCap + " " + bCap);
 //    }
 //}
+
+
+
+
+
+
+//Print the substring in the inclusive range from Start to End -1.
+
+public class solution {
+
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        String S = in.next();
+        int start = in.nextInt();
+        int end = in.nextInt();
+    }
+}
