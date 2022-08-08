@@ -309,3 +309,27 @@ import java.util.Scanner;
 //        System.out.println(S.substring(start, (end)));
 //    }
 //}
+
+
+
+
+
+//class Result {
+//
+//    /*
+//     * Complete the 'lonelyinteger' function below.
+//     *
+//     * The function is expected to return an INTEGER.
+//     * The function accepts INTEGER_ARRAY a as parameter.
+//     */
+//
+//    public static int lonelyinteger(List<Integer> a) {
+//        // Write your code here
+//        int b = 0;
+//        for(int i = 0; i <= a.size(); i++){
+//
+//            return (int b);
+//        }
+//    }
+//
+//}
