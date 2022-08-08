@@ -354,3 +354,46 @@ class Result {*/
 //    }
 //
 //}
+
+//class solution {
+//    int n;
+//    public int find(int[] A) {
+//        // write your code in Java SE 8
+//        for(int i = 0; i <= A.length; i++){
+//            if(i > i - 1){
+//                int n = i;
+//            }
+//        }
+//    }
+//}
+
+
+
+
+// you can also use imports, for example:
+//import java.util.*;
+
+// you can write to stdout for debugging purposes, e.g.
+// System.out.println("this is a debug message");
+
+//that, given an array A of N integers, returns the smallest positive integer (greater than 0) that does not occur in A.
+
+//        For example, given A = [1, 3, 6, 4, 1, 2], the function should return 5.
+//class solution {
+//
+//    public int solution(int[] A) {
+//        // write your code in Java SE 8
+//        int n = 1;
+//        Arrays.sort(A);
+//
+//        // if (A[0] > 1) return n;
+//        if (A[A.length - 1] <= 0) return n;
+//
+//        for (int i = 0; i < A.length; i++) {
+//            if (A[i] == n) {
+//                n++;
+//            }
+//        }
+//        return(n);
+//    }
+//}
