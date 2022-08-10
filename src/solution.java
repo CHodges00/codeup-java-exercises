@@ -412,6 +412,16 @@ public class solution {
             String s1=sc.next();
             int x=sc.nextInt();
             //Complete this line
+            if(x < 100){
+                // System.out.println(s1 + " " + 0 + x);
+                System.out.printf("%-13.13s  %-13.13s%n", s1, "0" + x);
+            }else if (x < 10){
+                System.out.printf("%-13.13s  %-13.13s%n", s1, "00" + x);
+
+            }else{
+                System.out.printf("%-13.13s  %-13.13s%n", s1, x);
+            }
+
         }
         System.out.println("================================");
 
