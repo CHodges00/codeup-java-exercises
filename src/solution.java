@@ -96,9 +96,6 @@ import java.util.Scanner;
 //}
 
 
-
-
-
 //Sample Input
 //
 //        Hello world
@@ -120,7 +117,6 @@ import java.util.Scanner;
 //        }
 //    }
 //}
-
 
 
 //If both values are greater than zero, then the main method must output the area of the parallelogram. Otherwise, print "java.lang.Exception: Breadth and height must be positive" without quotes.
@@ -153,7 +149,6 @@ import java.util.Scanner;
 //        }//end of main
 //
 //        }//end of class
-
 
 
 //If n = String
@@ -205,7 +200,6 @@ import java.util.Scanner;
 //}
 
 
-
 //Given a double-precision number, , denoting an amount of money, use the NumberFormat class' getCurrencyInstance method to convert  into the US, Indian, Chinese, and French currency formats. Then print the formatted values as follows:
 //
 //        US: formattedPayment
@@ -238,8 +232,6 @@ import java.util.Scanner;
 //        System.out.println("France: " + france);
 //    }
 //}
-
-
 
 
 //Given a string, matching the regular expression [A-Za-z !,?._'@]+,
@@ -292,10 +284,6 @@ import java.util.Scanner;
 //}
 
 
-
-
-
-
 //Print the substring in the inclusive range from Start to End -1.
 
 //public class solution {
@@ -309,9 +297,6 @@ import java.util.Scanner;
 //        System.out.println(S.substring(start, (end)));
 //    }
 //}
-
-
-
 
 
 //class Result {
@@ -335,18 +320,16 @@ import java.util.Scanner;
 //}
 
 
-
-
 //Return the absolute difference between the sums of the matrix's two diagonals as a single integer.
 /*
 class Result {*/
 
-    /*
-     * Complete the 'diagonalDifference' function below.
-     *
-     * The function is expected to return an INTEGER.
-     * The function accepts 2D_INTEGER_ARRAY arr as parameter.
-     */
+/*
+ * Complete the 'diagonalDifference' function below.
+ *
+ * The function is expected to return an INTEGER.
+ * The function accepts 2D_INTEGER_ARRAY arr as parameter.
+ */
 //
 //    public static int diagonalDifference(List<List<Integer>> arr) {
 //        // Write your code here
@@ -366,8 +349,6 @@ class Result {*/
 //        }
 //    }
 //}
-
-
 
 
 // you can also use imports, for example:
@@ -397,7 +378,6 @@ class Result {*/
 //}
 
 
-
 //
 //In each line of output there should be two columns:
 //        The first column contains the String and is left justified using exactly 15 characters.
@@ -406,19 +386,18 @@ class Result {*/
 public class solution {
 
     public static void main(String[] args) {
-        Scanner sc=new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
         System.out.println("================================");
-        for(int i=0;i<3;i++){
-            String s1=sc.next();
-            int x=sc.nextInt();
+        for (int i = 0; i < 3; i++) {
+            String s1 = sc.next();
+            int x = sc.nextInt();
             //Complete this line
-            if(x < 100){
-                // System.out.println(s1 + " " + 0 + x);
-                System.out.printf("%-13.13s  %-13.13s%n", s1, "0" + x);
-            }else if (x < 10){
-                System.out.printf("%-13.13s  %-13.13s%n", s1, "00" + x);
 
-            }else{
+            if (x == 0) {
+                System.out.printf("%-13.13s  %-13.13s%n", s1, "00" + x);
+            } else if (x < 100) {
+                System.out.printf("%-13.13s  %-13.13s%n", s1, "0" + x);
+            } else {
                 System.out.printf("%-13.13s  %-13.13s%n", s1, x);
             }
 
