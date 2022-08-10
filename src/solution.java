@@ -379,16 +379,14 @@ class Result {*/
 //that, given an array A of N integers, returns the smallest positive integer (greater than 0) that does not occur in A.
 
 //        For example, given A = [1, 3, 6, 4, 1, 2], the function should return 5.
+
 //class solution {
 //
 //    public int solution(int[] A) {
-//        // write your code in Java SE 8
 //        int n = 1;
 //        Arrays.sort(A);
-//
-//        // if (A[0] > 1) return n;
 //        if (A[A.length - 1] <= 0) return n;
-//
+//        if (A[0] > 1) return n;
 //        for (int i = 0; i < A.length; i++) {
 //            if (A[i] == n) {
 //                n++;
@@ -397,3 +395,25 @@ class Result {*/
 //        return(n);
 //    }
 //}
+
+
+
+//
+//In each line of output there should be two columns:
+//        The first column contains the String and is left justified using exactly 15 characters.
+//        The second column contains the integer, expressed in exactly 3 digits; if the original input has less than three digits, you must pad your output's leading digits with zeroes.
+
+public class solution {
+
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("================================");
+        for(int i=0;i<3;i++){
+            String s1=sc.next();
+            int x=sc.nextInt();
+            //Complete this line
+        }
+        System.out.println("================================");
+
+    }
+}
