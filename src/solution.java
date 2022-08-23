@@ -417,28 +417,52 @@ class Result {*/
 //Given a string A, print Yes if it is a palindrome, print No otherwise.
 
 
+//public class solution {
+//
+//    public static void main(String[] args) {
+//
+//        Scanner sc=new Scanner(System.in);
+//        String A=sc.next();
+//        /* Enter your code here. Print output to STDOUT. */
+//        String rev = "";
+//
+//        // Initializing a new boolean variable for the
+//        // answer
+//        boolean ans = false;
+//
+//        for (int i = A.length() - 1; i >= 0; i--) {
+//            rev = rev + A.charAt(i);
+//        }
+//
+//        // Checking if both the strings are equal
+//        if (A.equals(rev)) {
+//            ans = true;
+//        }
+//
+//        System.out.println(ans);
+//    }
+//}
+
+
+
+
+
+
+
+
 public class solution {
+
+    static boolean isAnagram(String a, String b) {
+        // Complete the function
+    }
 
     public static void main(String[] args) {
 
-        Scanner sc=new Scanner(System.in);
-        String A=sc.next();
-        /* Enter your code here. Print output to STDOUT. */
-        String rev = "";
-
-        // Initializing a new boolean variable for the
-        // answer
-        boolean ans = false;
-
-        for (int i = A.length() - 1; i >= 0; i--) {
-            rev = rev + A.charAt(i);
-        }
-
-        // Checking if both the strings are equal
-        if (A.equals(rev)) {
-            ans = true;
-        }
-
-        System.out.println(ans);
+        Scanner scan = new Scanner(System.in);
+        String a = scan.next();
+        String b = scan.next();
+        scan.close();
+        boolean ret = isAnagram(a, b);
+        System.out.println( (ret) ? "Anagrams" : "Not Anagrams" );
     }
 }
