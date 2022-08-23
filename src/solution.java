@@ -424,6 +424,21 @@ public class solution {
         Scanner sc=new Scanner(System.in);
         String A=sc.next();
         /* Enter your code here. Print output to STDOUT. */
+        String rev = "";
 
+        // Initializing a new boolean variable for the
+        // answer
+        boolean ans = false;
+
+        for (int i = A.length() - 1; i >= 0; i--) {
+            rev = rev + A.charAt(i);
+        }
+
+        // Checking if both the strings are equal
+        if (A.equals(rev)) {
+            ans = true;
+        }
+
+        System.out.println(ans);
     }
 }
