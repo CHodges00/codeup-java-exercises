@@ -449,34 +449,64 @@ class Result {*/
 
 
 
+//Check if two String inputs are Anagrams
+
+//public class solution {
+//
+//    static boolean isAnagram(String a, String b) {
+//        // Complete the function
+//        if (a.length() != b.length()) {
+//            return false;
+//        }
+//        int count[] = new int[256];
+//        for (int i = 0; i < a.length(); i++) {
+//            count[a.toLowerCase().charAt(i)]++;
+//            count[b.toLowerCase().charAt(i)]--;
+//        }
+//        for (int i = 0; i < 256; i++) {
+//            if (count[i] != 0) {
+//                return false;
+//            }
+//        }
+//        return true;
+//    }
+//
+//    public static void main(String[] args) {
+//
+//        Scanner scan = new Scanner(System.in);
+//        String a = scan.next();
+//        String b = scan.next();
+//        scan.close();
+//        boolean ret = isAnagram(a, b);
+//        System.out.println( (ret) ? "Anagrams" : "Not Anagrams" );
+//    }
+//}
+
+
+
+
+
+//        Given a string S , matching the regular expression [A-Za-z !,?._'@]+,
+//        split the string into tokens. We define a token to be one or more consecutive English alphabetic letters.
+//        Then, print the number of tokens, followed by each token on a new line.
+
 
 public class solution {
 
-    static boolean isAnagram(String a, String b) {
-        // Complete the function
-        if (a.length() != b.length()) {
-            return false;
-        }
-        int count[] = new int[256];
-        for (int i = 0; i < a.length(); i++) {
-            count[a.toLowerCase().charAt(i)]++;
-            count[b.toLowerCase().charAt(i)]--;
-        }
-        for (int i = 0; i < 256; i++) {
-            if (count[i] != 0) {
-                return false;
-            }
-        }
-        return true;
-    }
-
     public static void main(String[] args) {
-
         Scanner scan = new Scanner(System.in);
-        String a = scan.next();
-        String b = scan.next();
+        String s = scan.nextLine();
+        if(s == " "){
+            System.out.println(0);
+        }
+        // Write your code here.
+        String a = s.replaceAll("^\\s+","");
+        String[] stringarray = a.split("[!,? ._'@]+");
+        int count = stringarray.length;
+        System.out.println(count);
+        for (String value : stringarray) {
+            System.out.println(value);
+        }
         scan.close();
-        boolean ret = isAnagram(a, b);
-        System.out.println( (ret) ? "Anagrams" : "Not Anagrams" );
     }
 }
