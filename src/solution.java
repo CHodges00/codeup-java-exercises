@@ -491,22 +491,48 @@ class Result {*/
 //        Then, print the number of tokens, followed by each token on a new line.
 
 
-public class solution {
+//public class solution {
+//
+//    public static void main(String[] args) {
+//        Scanner scan = new Scanner(System.in);
+//        String s = scan.nextLine();
+//        if(s == " "){
+//            System.out.println(0);
+//        }
+//        // Write your code here.
+//        String a = s.replaceAll("^\\s+","");
+//        String[] stringarray = a.split("[!,? ._'@]+");
+//        int count = stringarray.length;
+//        System.out.println(count);
+//        for (String value : stringarray) {
+//            System.out.println(value);
+//        }
+//        scan.close();
+//    }
+//}
 
-    public static void main(String[] args) {
-        Scanner scan = new Scanner(System.in);
-        String s = scan.nextLine();
-        if(s == " "){
-            System.out.println(0);
+
+
+
+
+
+
+
+
+//  For each test case, print Valid if the syntax of the given pattern is correct.
+//  Otherwise, print Invalid. Do not print the quotes.
+
+
+public class solution
+{
+    public static void main(String[] args){
+        Scanner in = new Scanner(System.in);
+        int testCases = Integer.parseInt(in.nextLine());
+        while(testCases>0){
+            String pattern = in.nextLine();
+            //Write your code
+            System.out.println(pattern);
+            testCases--;
         }
-        // Write your code here.
-        String a = s.replaceAll("^\\s+","");
-        String[] stringarray = a.split("[!,? ._'@]+");
-        int count = stringarray.length;
-        System.out.println(count);
-        for (String value : stringarray) {
-            System.out.println(value);
-        }
-        scan.close();
     }
 }
