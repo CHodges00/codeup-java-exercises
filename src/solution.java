@@ -541,6 +541,11 @@ class Result {*/
 
 
 
+
+
+
+
+
 //        You are updating the username policy on your company's internal networking platform. According to the policy,
 //        a username is considered valid if all the following constraints are satisfied:
 //
@@ -549,29 +554,27 @@ class Result {*/
 //      uppercase characters , and digits .
 //    The first character of the username must be an alphabetic character, i.e., either lowercase character  or uppercase character .
 
-
-
-class UsernameValidator {
-    /*
-     * Write regular expression here.
-     */
-    public static final String regularExpression = null;
-}
-
-
-public class solution {
-    private static final Scanner scan = new Scanner(System.in);
-
-    public static void main(String[] args) {
-        int n = Integer.parseInt(scan.nextLine());
-        while (n-- != 0) {
-            String userName = scan.nextLine();
-
-            if (userName.matches(UsernameValidator.regularExpression)) {
-                System.out.println("Valid");
-            } else {
-                System.out.println("Invalid");
-            }
-        }
-    }
-}
+//class UsernameValidator {
+//    /*
+//     * Write regular expression here.
+//     */
+//    public static final String regularExpression = "^[a-zA-Z]([_]|[a-zA-Z0-9]){7,29}$";
+//}
+//
+//
+//public class solution {
+//    private static final Scanner scan = new Scanner(System.in);
+//
+//    public static void main(String[] args) {
+//        int n = Integer.parseInt(scan.nextLine());
+//        while (n-- != 0) {
+//            String userName = scan.nextLine();
+//
+//            if (userName.matches(UsernameValidator.regularExpression)) {
+//                System.out.println("Valid");
+//            } else {
+//                System.out.println("Invalid");
+//            }
+//        }
+//    }
+//}
