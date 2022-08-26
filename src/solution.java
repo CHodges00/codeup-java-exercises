@@ -578,3 +578,21 @@ class Result {*/
 //        }
 //    }
 //}
+
+
+
+
+
+
+
+
+
+//In each line, output the number located in Yth position of Xth line. If there is no such position, just print "ERROR!"
+
+
+public class solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+    }
+}
