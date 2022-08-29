@@ -693,23 +693,23 @@ class Result {*/
 //          Otherwise, print the person's name and phone number. See sample output for the exact format.
 
 
-class solution {
-    public static void main(String []argh) {
+class solution{
+    public static void main(String []argh){
         Scanner in = new Scanner(System.in);
-        int n=in.nextInt();
-        in.nextLine();
+        int n=Integer.parseInt(in.nextLine());
+        HashMap<String,Integer> data = new HashMap<>();
         for(int i=0;i<n;i++)
         {
             String name=in.nextLine();
-            int phone=in.nextInt();
-            in.nextLine();
+            int phone=Integer.parseInt(in.nextLine());
+            data.put(name, phone);
         }
         while(in.hasNext())
         {
             String s=in.nextLine();
+            System.out.println(data.containsKey(s)?s+"="+data.get(s):"Not found");
+
         }
-
-
     }
 }
 
