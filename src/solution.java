@@ -590,38 +590,54 @@ class Result {*/
 //In each line, output the number located in Yth position of Xth line. If there is no such position, just print "ERROR!"
 
 
-public class solution {
+//public class solution {
+//
+//    public static void main(String[] args) {
+//        Scanner sc = new Scanner(System.in);
+//        List<List<Integer>> list = new ArrayList<>();
+//
+//        int n = sc.nextInt();
+//
+//        while(n > 0){
+//            int l = sc.nextInt(); //Number of integers in single line
+//
+//            List<Integer> arr =new ArrayList<>(); //Create array list
+//
+//            while(l!= 0 ){
+//                arr.add(sc.nextInt());
+//                l--;
+//            }
+//
+//            list.add(arr);
+//            n--;
+//        }
+//        int query = sc.nextInt();
+//        while(query!= 0){
+//            int x = sc.nextInt();
+//            int y = sc.nextInt();
+//            try {
+//                System.out.println(list.get(x-1).get(y-1));
+//            }
+//            catch (Exception e){
+//                System.out.println("ERROR!");
+//            }
+//            query--;
+//        }
+//    }
+//}
 
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        List<List<Integer>> list = new ArrayList<>();
 
-        int n = sc.nextInt();
 
-        while(n > 0){
-            int l = sc.nextInt(); //Number of integers in single line
 
-            List<Integer> arr =new ArrayList<>(); //Create array list
 
-            while(l!= 0 ){
-                arr.add(sc.nextInt());
-                l--;
-            }
 
-            list.add(arr);
-            n--;
-        }
-        int query = sc.nextInt();
-        while(query!= 0){
-            int x = sc.nextInt();
-            int y = sc.nextInt();
-            try {
-                System.out.println(list.get(x-1).get(y-1));
-            }
-            catch (Exception e){
-                System.out.println("ERROR!");
-            }
-            query--;
-        }
-    }
-}
+
+
+
+
+
+
+//        Given a list, L , of N integers, perform Q queries on the list.
+//        Once all queries are completed, print the modified list as a single line of space-separated integers.
+
+
