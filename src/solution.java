@@ -725,10 +725,27 @@ class solution {
 
 
 
-//public class solution {
-//
 //    public static boolean canWin(int leap, int[] game) {
-//        // Return true if you can win the game; otherwise, return false.
+//
+//        int[] directions = new int[]{1,-1,leap};
+//
+//        LinkedList<Integer> arr = new LinkedList<>();
+//        arr.add(0);
+//
+//        int i = 0;
+//        while(!arr.isEmpty()) {
+//            game[i] = 1;
+//            i = arr.poll();
+//            for(int d = 0; d < directions.length; d++) {
+//                int c = i + directions[d];
+//                if(c >= game.length) return true;
+//                if(c >= 0 && game[c]==0) {
+//                    arr.add(c);
+//                }
+//            }
+//        }
+//
+//        return false;
 //    }
 //
 //    public static void main(String[] args) {
