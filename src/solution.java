@@ -778,18 +778,52 @@ class Result {*/
 //        Leading zeros are allowed. The length of A, B, C, or D can't be greater than 3.
 
 
-class solution{
+//class solution{
+//
+//    public static void main(String[] args){
+//        Scanner in = new Scanner(System.in);
+//        while(in.hasNext()){
+//            String IP = in.next();
+//            System.out.println(IP.matches(new MyRegex().pattern));
+//        }
+//
+//    }
+//}
+//
+//class MyRegex {
+//    String pattern = "^(((2[0-4][0-9]|25[0-5]|[01]?[0-9]{1,2})\\.){3})(25[0-5]|2[0-4][0-9]|[01]?[0-9]{1,2})$";
+//}
 
-    public static void main(String[] args){
-        Scanner in = new Scanner(System.in);
-        while(in.hasNext()){
-            String IP = in.next();
-            System.out.println(IP.matches(new MyRegex().pattern));
-        }
 
+
+
+
+
+
+//Given a string, S , and an integer, K , complete the function so that it finds the lexicographically smallest and largest substrings of length K.
+
+
+public class solution {
+
+    public static String getSmallestAndLargest(String s, int k) {
+        String smallest = "";
+        String largest = "";
+
+        // Complete the function
+        // 'smallest' must be the lexicographically smallest substring of length 'k'
+
+        // 'largest' must be the lexicographically largest substring of length 'k'
+
+        return smallest + "\n" + largest;
     }
-}
 
-class MyRegex {
-    String pattern = "^(((2[0-4][0-9]|25[0-5]|[01]?[0-9]{1,2})\\.){3})(25[0-5]|2[0-4][0-9]|[01]?[0-9]{1,2})$";
+
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        String s = scan.next();
+        int k = scan.nextInt();
+        scan.close();
+
+        System.out.println(getSmallestAndLargest(s, k));
+    }
 }
