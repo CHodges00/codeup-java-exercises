@@ -4,6 +4,8 @@ import java.util.Locale;
 import java.io.*;
 import java.util.*;
 import java.util.Scanner;
+import java.util.regex.Pattern;
+import java.util.regex.PatternSyntaxException;
 //public class solution {
 //
 //
@@ -852,7 +854,14 @@ public class solution
         while(testCases>0){
             String pattern = in.nextLine();
             //Write your code
-            System.out.println(pattern);
+            if (pattern != null && !pattern.equals("")) {
+                try {
+                    Pattern.compile(pattern);
+                    System.out.println("Valid");
+                } catch (PatternSyntaxException exception) {
+                    System.out.println("Invalid");
+                }
+            }
             testCases--;
         }
     }
