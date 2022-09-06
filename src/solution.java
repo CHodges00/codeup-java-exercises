@@ -4,6 +4,7 @@ import java.util.Locale;
 import java.io.*;
 import java.util.*;
 import java.util.Scanner;
+import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.util.regex.PatternSyntaxException;
 //public class solution {
@@ -846,24 +847,70 @@ class Result {*/
 //        In this problem, you are given a pattern. You have to check whether the syntax of the given pattern is valid.
 
 
-public class solution
-{
-    public static void main(String[] args){
+//public class solution
+//{
+//    public static void main(String[] args){
+//        Scanner in = new Scanner(System.in);
+//        int testCases = Integer.parseInt(in.nextLine());
+//        while(testCases>0){
+//            String pattern = in.nextLine();
+//            //Write your code
+//            if (pattern != null && !pattern.equals("")) {
+//                try {
+//                    Pattern.compile(pattern);
+//                    System.out.println("Valid");
+//                } catch (PatternSyntaxException exception) {
+//                    System.out.println("Invalid");
+//                }
+//            }
+//            testCases--;
+//        }
+//    }
+//}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//        To solve this challenge, complete the following three lines:
+//        Write a RegEx that will match any repeated word.
+//        Complete the second compile argument so that the compiled RegEx is case-insensitive.
+//        Write the two necessary arguments for replaceAll such that each repeated word is replaced with
+//        the very first instance the word found in the sentence. It must be the exact first occurrence of the word, as the expected output is case-sensitive.
+
+public class DuplicateWords {
+
+    public static void main(String[] args) {
+
+        String regex = "/* Write a RegEx matching repeated words here. */";
+        Pattern p = Pattern.compile(regex, /* Insert the correct Pattern flag here.*/);
+
         Scanner in = new Scanner(System.in);
-        int testCases = Integer.parseInt(in.nextLine());
-        while(testCases>0){
-            String pattern = in.nextLine();
-            //Write your code
-            if (pattern != null && !pattern.equals("")) {
-                try {
-                    Pattern.compile(pattern);
-                    System.out.println("Valid");
-                } catch (PatternSyntaxException exception) {
-                    System.out.println("Invalid");
-                }
+        int numSentences = Integer.parseInt(in.nextLine());
+
+        while (numSentences-- > 0) {
+            String input = in.nextLine();
+
+            Matcher m = p.matcher(input);
+
+            // Check for subsequences of input that match the compiled pattern
+            while (m.find()) {
+                input = input.replaceAll(/* The regex to replace */, /* The replacement. */);
             }
-            testCases--;
+
+            // Prints the modified sentence.
+            System.out.println(input);
         }
+
+        in.close();
     }
 }
-
