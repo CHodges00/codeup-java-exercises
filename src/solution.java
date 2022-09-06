@@ -803,34 +803,58 @@ class Result {*/
 //Given a string, S , and an integer, K , complete the function so that it finds the lexicographically smallest and largest substrings of length K.
 
 
-public class solution {
+//public class solution {
+//
+//    public static String getSmallestAndLargest(String s, int k) {
+//
+//        // Complete the function
+//        // 'smallest' must be the lexicographically smallest substring of length 'k'
+//
+//        // 'largest' must be the lexicographically largest substring of length 'k'
+//        int n = s.length();
+//        String smallest = s.substring(0,k);
+//        String largest =s.substring(0,k);
+//
+//        for(int i = 0;i<n-k+1;i++){
+//            String temp = s.substring(i,i+k);
+//            largest = largest.compareTo(temp)>0?largest:temp;
+//            smallest = smallest.compareTo(temp)<0?smallest:temp;
+//        }
+//
+//        return smallest + "\n" + largest;
+//    }
+//
+//
+//    public static void main(String[] args) {
+//        Scanner scan = new Scanner(System.in);
+//        String s = scan.next();
+//        int k = scan.nextInt();
+//        scan.close();
+//
+//        System.out.println(getSmallestAndLargest(s, k));
+//    }
+//}
 
-    public static String getSmallestAndLargest(String s, int k) {
 
-        // Complete the function
-        // 'smallest' must be the lexicographically smallest substring of length 'k'
 
-        // 'largest' must be the lexicographically largest substring of length 'k'
-        int n = s.length();
-        String smallest = s.substring(0,k);
-        String largest =s.substring(0,k);
 
-        for(int i = 0;i<n-k+1;i++){
-            String temp = s.substring(i,i+k);
-            largest = largest.compareTo(temp)>0?largest:temp;
-            smallest = smallest.compareTo(temp)<0?smallest:temp;
+
+//        Using Regex, we can easily match or search for patterns in a text.
+//        Before searching for a pattern, we have to specify one using some well-defined syntax.
+//        In this problem, you are given a pattern. You have to check whether the syntax of the given pattern is valid.
+
+
+public class solution
+{
+    public static void main(String[] args){
+        Scanner in = new Scanner(System.in);
+        int testCases = Integer.parseInt(in.nextLine());
+        while(testCases>0){
+            String pattern = in.nextLine();
+            //Write your code
+            System.out.println(pattern);
+            testCases--;
         }
-
-        return smallest + "\n" + largest;
-    }
-
-
-    public static void main(String[] args) {
-        Scanner scan = new Scanner(System.in);
-        String s = scan.next();
-        int k = scan.nextInt();
-        scan.close();
-
-        System.out.println(getSmallestAndLargest(s, k));
     }
 }
+
