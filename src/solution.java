@@ -879,7 +879,7 @@ class Result {*/
 
 
 
-
+//******* PRACTICE ******* This took entirely too long..........
 
 //        To solve this challenge, complete the following three lines:
 //        Write a RegEx that will match any repeated word.
