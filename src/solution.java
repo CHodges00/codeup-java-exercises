@@ -915,3 +915,32 @@ class Result {*/
 //        in.close();
 //    }
 //}
+
+
+
+
+
+
+
+
+
+//
+//        For each line, print the content enclosed within valid tags.
+//        If a line contains multiple instances of valid content, print out each instance of valid content on a new line;
+//        if no valid content is found, print None.
+
+
+public class solution{
+    public static void main(String[] args){
+
+        Scanner in = new Scanner(System.in);
+        int testCases = Integer.parseInt(in.nextLine());
+        while(testCases>0){
+            String line = in.nextLine();
+
+            //Write your code here
+
+            testCases--;
+        }
+    }
+}
