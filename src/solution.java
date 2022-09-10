@@ -939,6 +939,21 @@ public class solution{
             String line = in.nextLine();
 
             //Write your code here
+            String regexPattern = "<(.+)>([\\w]+[^<]*)</(\\1)>";
+            Pattern p = Pattern.compile(regexPattern);
+            Matcher m = p.matcher(line);
+            int count = 0;
+
+            while(m.find())
+            {
+                // System.out.println(m.group(0)); // get <h1>...</h1>
+                // System.out.println(m.group(1)); // get the text inside the tag
+                System.out.println(m.group(2)); // get the text between <x> </x>
+                count++;
+            }
+            if(count == 0){
+                System.out.println("None");
+            }
 
             testCases--;
         }
