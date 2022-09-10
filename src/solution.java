@@ -411,12 +411,6 @@ class Result {*/
 //}
 
 
-
-
-
-
-
-
 //Given a string A, print Yes if it is a palindrome, print No otherwise.
 
 
@@ -445,11 +439,6 @@ class Result {*/
 //        System.out.println(ans);
 //    }
 //}
-
-
-
-
-
 
 
 //Check if two String inputs are Anagrams
@@ -486,9 +475,6 @@ class Result {*/
 //}
 
 
-
-
-
 //        Given a string S , matching the regular expression [A-Za-z !,?._'@]+,
 //        split the string into tokens. We define a token to be one or more consecutive English alphabetic letters.
 //        Then, print the number of tokens, followed by each token on a new line.
@@ -515,13 +501,6 @@ class Result {*/
 //}
 
 
-
-
-
-
-
-
-
 //  For each test case, print Valid if the syntax of the given pattern is correct.
 //  Otherwise, print Invalid. Do not print the quotes.
 
@@ -539,14 +518,6 @@ class Result {*/
 //        }
 //    }
 //}
-
-
-
-
-
-
-
-
 
 
 //        You are updating the username policy on your company's internal networking platform. According to the policy,
@@ -581,13 +552,6 @@ class Result {*/
 //        }
 //    }
 //}
-
-
-
-
-
-
-
 
 
 //In each line, output the number located in Yth position of Xth line. If there is no such position, just print "ERROR!"
@@ -628,16 +592,6 @@ class Result {*/
 //        }
 //    }
 //}
-
-
-
-
-
-
-
-
-
-
 
 
 //        Given a list, L , of N integers, perform Q queries on the list.
@@ -682,13 +636,6 @@ class Result {*/
 //}
 
 
-
-
-
-
-
-
-
 //
 //        The first line will have an integer N denoting the number of entries in the phone book.
 //        Each entry consists of two lines: a name and the corresponding phone number.
@@ -715,17 +662,6 @@ class Result {*/
 //        }
 //    }
 //}
-
-
-
-
-
-
-
-
-
-
-
 
 
 //    public static boolean canWin(int leap, int[] game) {
@@ -770,11 +706,6 @@ class Result {*/
 //}
 
 
-
-
-
-
-
 //
 //        IP address is a string in the form "A.B.C.D",
 //        where the value of A, B, C, and D may range from 0 to 255.
@@ -796,11 +727,6 @@ class Result {*/
 //class MyRegex {
 //    String pattern = "^(((2[0-4][0-9]|25[0-5]|[01]?[0-9]{1,2})\\.){3})(25[0-5]|2[0-4][0-9]|[01]?[0-9]{1,2})$";
 //}
-
-
-
-
-
 
 
 //Given a string, S , and an integer, K , complete the function so that it finds the lexicographically smallest and largest substrings of length K.
@@ -839,9 +765,6 @@ class Result {*/
 //}
 
 
-
-
-
 //        Using Regex, we can easily match or search for patterns in a text.
 //        Before searching for a pattern, we have to specify one using some well-defined syntax.
 //        In this problem, you are given a pattern. You have to check whether the syntax of the given pattern is valid.
@@ -867,16 +790,6 @@ class Result {*/
 //        }
 //    }
 //}
-
-
-
-
-
-
-
-
-
-
 
 
 //******* PRACTICE ******* This took entirely too long..........
@@ -917,13 +830,6 @@ class Result {*/
 //}
 
 
-
-
-
-
-
-
-
 //
 //        For each line, print the content enclosed within valid tags.
 //        If a line contains multiple instances of valid content, print out each instance of valid content on a new line;
@@ -961,21 +867,14 @@ class Result {*/
 //}
 
 
-
-
-
-
-
-
-
-
-
-
 //        PerformOperation isOdd(): The lambda expression must return true if a number is odd or false if it is even.
 //        PerformOperation isPrime(): The lambda expression must return true if a number is prime or false if it is composite.
 //        PerformOperation isPalindrome(): The lambda expression must return true if a number is a palindrome or false if it is not.
 
 
+interface PerformOperation {
+    boolean check(int a);
+}
 
 class MyMath {
     public static boolean checker(PerformOperation p, int num) {
@@ -983,40 +882,66 @@ class MyMath {
     }
 
     // Write your code here
-    static void isOdd() {
-
+    public PerformOperation isOdd() {
+        return (n) -> (n % 2 != 0);
     }
 
-    public class Solution {
-
-        public static void main(String[] args) throws IOException {
-            MyMath ob = new MyMath();
-            BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-            int T = Integer.parseInt(br.readLine());
-            PerformOperation op;
-            boolean ret = false;
-            String ans = null;
-            while (T-- > 0) {
-                String s = br.readLine().trim();
-                StringTokenizer st = new StringTokenizer(s);
-                int ch = Integer.parseInt(st.nextToken());
-                int num = Integer.parseInt(st.nextToken());
-                if (ch == 1) {
-                    op = ob.isOdd();
-                    ret = ob.checker(op, num);
-                    ans = (ret) ? "ODD" : "EVEN";
-                } else if (ch == 2) {
-                    op = ob.isPrime();
-                    ret = ob.checker(op, num);
-                    ans = (ret) ? "PRIME" : "COMPOSITE";
-                } else if (ch == 3) {
-                    op = ob.isPalindrome();
-                    ret = ob.checker(op, num);
-                    ans = (ret) ? "PALINDROME" : "NOT PALINDROME";
-
+    public PerformOperation isPrime() {
+        return (n) -> {
+            for (int i = 2; i * i <= n; i++) {
+                if (n % i == 0) {
+                    return false;
                 }
-                System.out.println(ans);
             }
+
+            return true;
+        };
+    }
+
+    public PerformOperation isPalindrome() {
+        return (n) -> {
+            int temp = n;
+            int result = 0;
+            while (n > 0) {
+                int digit = n % 10;
+                result = (result * 10) + digit;
+                n /= 10;
+            }
+
+            return temp == result;
+        };
+    }
+}
+
+public class solution {
+
+    public static void main(String[] args) throws IOException {
+        MyMath ob = new MyMath();
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        int T = Integer.parseInt(br.readLine());
+        PerformOperation op;
+        boolean ret = false;
+        String ans = null;
+        while (T-- > 0) {
+            String s = br.readLine().trim();
+            StringTokenizer st = new StringTokenizer(s);
+            int ch = Integer.parseInt(st.nextToken());
+            int num = Integer.parseInt(st.nextToken());
+            if (ch == 1) {
+                op = ob.isOdd();
+                ret = ob.checker(op, num);
+                ans = (ret) ? "ODD" : "EVEN";
+            } else if (ch == 2) {
+                op = ob.isPrime();
+                ret = ob.checker(op, num);
+                ans = (ret) ? "PRIME" : "COMPOSITE";
+            } else if (ch == 3) {
+                op = ob.isPalindrome();
+                ret = ob.checker(op, num);
+                ans = (ret) ? "PALINDROME" : "NOT PALINDROME";
+
+            }
+            System.out.println(ans);
         }
     }
 }
