@@ -1,3 +1,5 @@
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
 import java.security.Permission;
 import java.text.NumberFormat;
 import java.util.Locale;
@@ -958,21 +960,24 @@ class Result {*/
 
 
 //Print the MD5 encryption value of S on a new line.
+//---JAVA 15 solution from discussion page
 
 
 import java.io.*;
 import java.util.*;
-import java.text.*;
-import java.math.*;
-import java.util.regex.*;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
 
 public class solution {
+    public static void main(String[] args) throws NoSuchAlgorithmException {
+        var str = new Scanner(System.in).next();
 
-    public static void main(String[] args) {
-        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
-        Scanner scan = new Scanner(System.in);
-        String s = scan.nextLine();
-        System.out.println(s);
-        
+        var md = MessageDigest.getInstance("MD5");
+        md.update(str.getBytes());
+        var digest = md.digest();
+
+        for (byte b : digest) {
+            System.out.format("%02x", b);
+        }
     }
 }
