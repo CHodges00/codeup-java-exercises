@@ -996,27 +996,56 @@ import java.text.*;
 import java.math.*;
 import java.util.regex.*;
 
+//public class solution {
+//
+//    public static void main(String[] args) {
+//
+//        Tester tester = new Tester();
+//        tester.check("^.{3}\\..{3}\\..{3}\\..{3}$");
+//
+//    }
+//}
+//
+//class Tester {
+//
+//    public void check(String pattern){
+//
+//        Scanner scanner = new Scanner(System.in);
+//        String testString = scanner.nextLine();
+//        Pattern p = Pattern.compile(pattern);
+//        Matcher m = p.matcher(testString);
+//        boolean match = m.matches();
+//
+//        System.out.format("%s", match);
+//    }
+//
+//}
+
+
+
+
+//You have a test string S. Your task is to match the pattern xxXxxXxxxx
+//Here x denotes a digit character, and X denotes a non-digit character.
+
 public class solution {
 
     public static void main(String[] args) {
 
-        Tester tester = new Tester();
-        tester.check("^.{3}\\..{3}\\..{3}\\..{3}$");
+        Regex_Test tester = new Regex_Test();
+        tester.checker("(\\d{2}\\D){2}\\d{4}"); // Use \\ instead of using \
 
     }
 }
 
-class Tester {
+class Regex_Test {
 
-    public void check(String pattern){
+    public void checker(String Regex_Pattern){
 
-        Scanner scanner = new Scanner(System.in);
-        String testString = scanner.nextLine();
-        Pattern p = Pattern.compile(pattern);
-        Matcher m = p.matcher(testString);
-        boolean match = m.matches();
-
-        System.out.format("%s", match);
+        Scanner Input = new Scanner(System.in);
+        String Test_String = Input.nextLine();
+        Pattern p = Pattern.compile(Regex_Pattern);
+        Matcher m = p.matcher(Test_String);
+        System.out.println(m.find());
     }
 
 }
