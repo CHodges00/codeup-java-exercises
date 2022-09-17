@@ -963,21 +963,60 @@ class Result {*/
 //---JAVA 15 solution from discussion page
 
 
+//import java.io.*;
+//import java.util.*;
+//import java.security.MessageDigest;
+//import java.security.NoSuchAlgorithmException;
+//
+//public class solution {
+//    public static void main(String[] args) throws NoSuchAlgorithmException {
+//        var str = new Scanner(System.in).next();
+//
+//        var md = MessageDigest.getInstance("MD5");
+//        md.update(str.getBytes());
+//        var digest = md.digest();
+//
+//        for (byte b : digest) {
+//            System.out.format("%02x", b);
+//        }
+//    }
+//}
+
+
+
+
+
+
+
+
+//Your task is to write a regular expression that matches only and exactly strings of form: abc.def.ghi.jkx
 import java.io.*;
 import java.util.*;
-import java.security.MessageDigest;
-import java.security.NoSuchAlgorithmException;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
 
 public class solution {
-    public static void main(String[] args) throws NoSuchAlgorithmException {
-        var str = new Scanner(System.in).next();
 
-        var md = MessageDigest.getInstance("MD5");
-        md.update(str.getBytes());
-        var digest = md.digest();
+    public static void main(String[] args) {
 
-        for (byte b : digest) {
-            System.out.format("%02x", b);
-        }
+        Tester tester = new Tester();
+        tester.check("^.{3}\\..{3}\\..{3}\\..{3}$");
+
     }
+}
+
+class Tester {
+
+    public void check(String pattern){
+
+        Scanner scanner = new Scanner(System.in);
+        String testString = scanner.nextLine();
+        Pattern p = Pattern.compile(pattern);
+        Matcher m = p.matcher(testString);
+        boolean match = m.matches();
+
+        System.out.format("%s", match);
+    }
+
 }
