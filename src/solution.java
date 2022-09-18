@@ -1058,12 +1058,45 @@ import java.util.regex.*;
 //        You have a test string S. Your task is to match the pattern XXxXXxXX
 //        Here, x denotes whitespace characters, and X denotes non-white space characters.
 
+//public class solution {
+//
+//    public static void main(String[] args) {
+//
+//        Regex_Test tester = new Regex_Test();
+//        tester.checker("(\\S{2}\\s){2}\\S{2}");
+//
+//    }
+//}
+//
+//class Regex_Test {
+//
+//    public void checker(String Regex_Pattern){
+//
+//        Scanner Input = new Scanner(System.in);
+//        String Test_String = Input.nextLine();
+//        Pattern p = Pattern.compile(Regex_Pattern);
+//        Matcher m = p.matcher(Test_String);
+//        System.out.println(m.find());
+//    }
+//
+//}
+
+
+
+
+
+
+
+
+//        You have a test string S. Your task is to match the pattern xxxXxxxxxxxxxxXxxx
+//        Here x denotes any word character and X denotes any non-word character.
+
 public class solution {
 
     public static void main(String[] args) {
 
         Regex_Test tester = new Regex_Test();
-        tester.checker("(\\S{2}\\s){2}\\S{2}");
+        tester.checker("\\w{3}\\W\\w{10}\\W\\w{3}"); // Use \\ instead of using \
 
     }
 }
