@@ -1126,25 +1126,95 @@ import java.util.regex.*;
 //        S must start with a digit X and end with . symbol.
 //        S should be 6 characters long only.
 
+//public class solution {
+//
+//    public static void main(String[] args) {
+//
+//        Regex_Test tester = new Regex_Test();
+//        tester.checker("^\\d\\w{4}\\.$"); // Use \\ instead of using \
+//
+//    }
+//}
+//
+//class Regex_Test {
+//
+//    public void checker(String Regex_Pattern){
+//
+//        Scanner Input = new Scanner(System.in);
+//        String Test_String = Input.nextLine();
+//        Pattern p = Pattern.compile(Regex_Pattern);
+//        Matcher m = p.matcher(Test_String);
+//        System.out.println(m.find());
+//    }
+//
+//}
+
+
+
+
+
+
+
+import java.io.*;
+import java.math.*;
+import java.security.*;
+import java.text.*;
+import java.util.*;
+import java.util.concurrent.*;
+import java.util.regex.*;
+
+
+//class Result {
+//
+//    /*
+//     * Complete the 'eval_algebraic' function below.
+//     *
+//     * The function is expected to return an INTEGER.
+//     * The function accepts following parameters:
+//     *  1. STRING expr
+//     *  2. INTEGER val
+//     */
+//
+//    public static int eval_algebraic(String expr, int val) {
+//    expr = "3x + 7";
+//    val = 3;
+//
+//    char[] chars = expr.toCharArray();
+//
+//    int x = 1;
+//    return x;
+//    }
+//}
+//public class solution {
+//    public static void main(String[] args) throws IOException {
+//        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+//        BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(System.getenv("OUTPUT_PATH")));
+//
+//        String expr = bufferedReader.readLine();
+//
+//        int val = Integer.parseInt(bufferedReader.readLine().trim());
+//
+//        int result = Result.eval_algebraic(expr, val);
+//
+//        bufferedWriter.write(String.valueOf(result));
+//        bufferedWriter.newLine();
+//
+//        bufferedReader.close();
+//        bufferedWriter.close();
+//    }
+//}
+
 public class solution {
 
+
     public static void main(String[] args) {
+        String expr = "2x + 3";
+        int val = 5;
+        ArrayList<Integer> arr = new ArrayList<>();
+        for(int i = 0; i < expr.length(); i++){
+            arr.add(i);
+        }
 
-        Regex_Test tester = new Regex_Test();
-        tester.checker("^\\d\\w{4}\\.$"); // Use \\ instead of using \
-
+        System.out.println(arr);
     }
-}
-
-class Regex_Test {
-
-    public void checker(String Regex_Pattern){
-
-        Scanner Input = new Scanner(System.in);
-        String Test_String = Input.nextLine();
-        Pattern p = Pattern.compile(Regex_Pattern);
-        Matcher m = p.matcher(Test_String);
-        System.out.println(m.find());
-    }
-
 }
