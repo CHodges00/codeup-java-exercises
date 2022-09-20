@@ -1229,45 +1229,91 @@ import java.util.stream.Stream;
 //        Given five positive integers, find the minimum and maximum values that can be calculated by summing exactly four of the five integers.
 //        Then print the respective minimum and maximum values as a single line of two space-separated long integers.
 import static java.util.stream.Collectors.toList;
+//
+//class Result {
+//
+//    /*
+//     * Complete the 'miniMaxSum' function below.
+//     *
+//     * The function accepts INTEGER_ARRAY arr as parameter.
+//     */
+//
+//    public static void miniMaxSum(List<Integer> arr) {
+//        // Write your code here
+//        long min = 0;
+//        long max = 0;
+//
+//        Collections.sort(arr);
+//        // System.out.println(arr);
+//
+//        for(int i=0;i<arr.size()-1;i++){
+//            min += arr.get(i);
+//        }
+//        for(int i=1;i<arr.size();i++){
+//            max += arr.get(i);
+//        }
+//
+//        System.out.println(min + " " + max);
+//    }
+//
+//}
+//
+//public class solution {
+//    public static void main(String[] args) throws IOException {
+//        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+//
+//        List<Integer> arr = Stream.of(bufferedReader.readLine().replaceAll("\\s+$", "").split(" "))
+//                .map(Integer::parseInt)
+//                .collect(toList());
+//
+//        Result.miniMaxSum(arr);
+//
+//        bufferedReader.close();
+//    }
+//}
+
+
+
+
+
+
+//Given an array of integers, where all elements but one occur twice, find the unique element.
 
 class Result {
+    public static int lonelyinteger(List<Integer> a) {
 
-    /*
-     * Complete the 'miniMaxSum' function below.
-     *
-     * The function accepts INTEGER_ARRAY arr as parameter.
-     */
+        int uniq = 0;
 
-    public static void miniMaxSum(List<Integer> arr) {
-        // Write your code here
-        long min = 0;
-        long max = 0;
-
-        Collections.sort(arr);
-        // System.out.println(arr);
-
-        for(int i=0;i<arr.size()-1;i++){
-            min += arr.get(i);
+        for (int i=0; i<a.size(); i++){
+            uniq = a.get(i);
+            a.remove(i);
+            if (!a.contains(uniq))
+                return uniq;
+            a.add(i, uniq);
         }
-        for(int i=1;i<arr.size();i++){
-            max += arr.get(i);
-        }
-
-        System.out.println(min + " " + max);
+        return uniq;
     }
-
 }
+
+
 
 public class solution {
     public static void main(String[] args) throws IOException {
         BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+        BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(System.getenv("OUTPUT_PATH")));
 
-        List<Integer> arr = Stream.of(bufferedReader.readLine().replaceAll("\\s+$", "").split(" "))
+        int n = Integer.parseInt(bufferedReader.readLine().trim());
+
+        List<Integer> a = Stream.of(bufferedReader.readLine().replaceAll("\\s+$", "").split(" "))
                 .map(Integer::parseInt)
                 .collect(toList());
 
-        Result.miniMaxSum(arr);
+        int result = Result.lonelyinteger(a);
+
+        bufferedWriter.write(String.valueOf(result));
+        bufferedWriter.newLine();
 
         bufferedReader.close();
+        bufferedWriter.close();
     }
 }
